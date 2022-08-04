@@ -13,8 +13,8 @@ function Study() {
                 <p>2018 - 2021</p>
                 <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-blue-600 fill-blue-300 opacity-10 -rotate-45 absolute -right-10 top-0"/>
               </div>
-              <div className="w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
-              <div className="w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
+              <div className="w-[260px] sm:w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
+              <div className="w-[230px] sm:w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
             </div>
 
             <div className="min-w-[300px] h-28 bg-gray-100 rounded-2xl relative group">
@@ -24,8 +24,8 @@ function Study() {
                 <p>2016 - 2018</p>
                 <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-blue-600 fill-blue-300 opacity-10 -rotate-45 absolute -right-10 top-0"/>
               </div>
-              <div className="w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
-              <div className="w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
+              <div className="w-[260px] sm:w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
+              <div className="w-[230px] sm:w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
             </div>
             
             <div className="min-w-[300px] h-28 bg-gray-100 rounded-2xl relative group">
@@ -35,8 +35,8 @@ function Study() {
                 <p>2013 - 2016</p>
                 <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-blue-600 fill-blue-300 opacity-10 -rotate-45 absolute -right-10 top-0"/>
               </div>
-              <div className="w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
-              <div className="w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
+              <div className="w-[260px] sm:w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
+              <div className="w-[230px] sm:w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
             </div>
 
             <div className="min-w-[300px] h-28 bg-gray-100 rounded-2xl relative group">
@@ -46,8 +46,8 @@ function Study() {
               <p>2006 - 2012</p>
                 <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-blue-600 fill-blue-300 opacity-10 -rotate-45 absolute -right-10 top-0"/>
               </div>
-              <div className="w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
-              <div className="w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
+              <div className="w-[260px] sm:w-[270px] h-2 bg-white/80 absolute left-5 -bottom-2 rounded-b-2xl transition-all delay-900 duration-800 ease-out group-hover:-translate-y-2 group-hover:opacity-0" />
+              <div className="w-[230px] sm:w-[240px] h-2 bg-white/40 absolute left-10 -bottom-4 rounded-b-2xl transition-all group-hover:-translate-y-4  group-hover:opacity-0" />
             </div>
           </div>
         </div>

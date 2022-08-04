@@ -3,9 +3,12 @@ import Head from "next/head";
 
 import Header from "../components/layouts/header";
 import Navbar from "../components/layouts/navbar";
+import HeroGlow from "../components/heros/hero-glow";
 import Skills from "../components/skills/skills";
-import Projects from "../components/projects/project"
+import Study from "../components/studys/study";
+import Cariers from "../components/cariers/carier";
 import Hobbys from "../components/hobbys/hobby";
+import Projects from "../components/projects/project"
 import Footer from "../components/layouts/footer";
 
 const Home: NextPage = () => {
@@ -16,31 +19,15 @@ const Home: NextPage = () => {
           <title>@mnorsaputra - portofolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        {/* ---- Header ---- */}
+
         <Header />
-
-        {/* ---- Navigasi ---- */}
         <Navbar />
-
-        {/* ---- Hero ---- */}
-        {/* <HeroGlow /> */}
-
-        {/* ---- Studys ---- */}
-        {/* <Study /> */}
-
-        {/* ---- Cariers ---- */}
-        {/* <Cariers /> */}
-
-        {/* ---- Skill ---- */}
-        {/* <Skills /> */}
-
-        {/* ---- Project ---- */}
+        <HeroGlow />
+        <Study />
+        <Cariers />
+        <Skills />
         <Projects/>
-        
-        {/* ---- Hobby ---- */}
-        {/* <Hobbys/> */}
-
-        {/* Footer */}
+        <Hobbys/>
         <Footer />
       </div>
     </div>
