@@ -7,7 +7,7 @@ import {
   
 export default function Navbar() {
     return (
-        <nav className="border-b-4 border-gray-200 sticky top-0 bg-white/90 backdrop-blur-sm z-20">
+        <nav className="border-b-4 border-gray-200 sticky top-0 bg-white/80 backdrop-blur-lg z-20">
           <ul className="flex justify-between items-center">
             <li className="w-full text-center">
               <Link href="/" passHref>
