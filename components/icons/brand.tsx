@@ -517,7 +517,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "tailwindcss") {
     return (
       <svg
-        className="w-20 animate-bounce-x"
+        className="w-20 animate-bounce-y"
         width="100"
         height="100"
         viewBox="0 -51 256 256"
