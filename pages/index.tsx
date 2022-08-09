@@ -22,10 +22,10 @@ const Home: NextPage = () => {
 
         <Header />
         <Navbar />
-        <HeroGlow />
+        {/* <HeroGlow /> */}
         <Study />
-        <Cariers />
-        <Skills />
+        {/* <Cariers /> */}
+        {/* <Skills /> */}
         <Projects/>
         <Hobbys/>
         <Footer />

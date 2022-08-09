@@ -11,7 +11,7 @@ export default function Skills() {
             <h2 className="inline text-2xl font-bold text-green-800 relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-green-800 before:animate-pulse">
               Skill
             </h2>
-            <div className="flex flex-wrap justify-between items-center gap-y-3 gap-x-3 mt-8">
+            <div className="flex flex-wrap justify-evenly sm:justify-between items-center gap-y-3 gap-x-3 mt-8">
               <span className="w-28 h-28 rounded-2xl bg-white flex items-center justify-center relative overflow-hidden">
                 <Skill type="boostrap" />
                 <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
