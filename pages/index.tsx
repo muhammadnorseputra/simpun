@@ -11,7 +11,8 @@ import Hobbys from "../components/hobbys/hobby";
 import Projects from "../components/projects/project"
 import Footer from "../components/layouts/footer";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ resource }: any) => {
+  const { projects, studys, hobbys } = resource;
   return (
     <div className="container mx-auto max-w-full md:max-w-xl">
       <div className="bg-white min-h-screen shadow-3xl">
@@ -23,15 +24,25 @@ const Home: NextPage = () => {
         <Header />
         <Navbar />
         {/* <HeroGlow /> */}
-        <Study />
+        <Study studys={studys}/>
         {/* <Cariers /> */}
         {/* <Skills /> */}
         <Projects/>
-        <Hobbys/>
+        <Hobbys hobbys={hobbys}/>
         <Footer />
       </div>
     </div>
   );
 };
+
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const response = await fetch('https://ornate-biscochitos-299373.netlify.app/db.json')
+  const resource = await response.json()
+  // Pass resource to the page via props
+  return { props: { resource } }
+}
 
 export default Home;

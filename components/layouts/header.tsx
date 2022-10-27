@@ -14,12 +14,16 @@ export default function Header() {
                 <span className="text-green-700">a</span>putr
                 <span className="text-green-700">a</span>
               </div>
-              <div>
-                <LightBulbIcon className="w-6 h-6 ml-3 text-gray-500" />
-              </div>
             </div>
             {/* More */}
             <div>
+            <button
+                type="button"
+                role="button"
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-600"
+              >
+                <LightBulbIcon className="w-6 h-6 text-gray-500" />
+              </button>
               <button
                 type="button"
                 role="button"
