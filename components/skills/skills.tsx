@@ -12,7 +12,7 @@ export default function Skills() {
               Skill
             </h2>
             <div className="flex flex-wrap justify-evenly sm:justify-between items-center gap-y-3 gap-x-3 mt-8">
-              <span className="w-28 h-28 rounded-2xl bg-white flex items-center justify-center relative overflow-hidden">
+              <span className="w-18 h-18 md:w-28 md:h-28 rounded-2xl bg-white flex items-center justify-center relative overflow-hidden">
                 <Skill type="boostrap" />
                 <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
               </span>

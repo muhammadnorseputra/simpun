@@ -12,7 +12,7 @@ function Study({ studys }: any) {
             // const { id, tingkat, jurusan, location, year_start, year_end } = study;
             <div key={study.id} className="min-w-[300px] h-28 bg-gray-100 rounded-2xl relative group">
               <div className="px-4 pb-6 pt-3 overflow-hidden relative">
-                <h3 className="font-bold text-slate-600 text-xl">{study.tingkat} - {study.jurusan}</h3>
+                <h3 className="font-bold text-slate-600 text-xl">{study.tingkat} { study.jurusan ? '-':''} {study.jurusan}</h3>
                 <p>{study.location}</p>
                 <p>{study.year_start} - {study.year_end}</p>
                 <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-blue-600 fill-blue-300 opacity-10 -rotate-45 absolute -right-10 top-0"/>

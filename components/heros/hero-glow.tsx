@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { GithubIcon, FigmaIcon, TwitterIcon, IgIcon, FbIcon, DownloadIcon } from '../icons'
+import {shimmer, toBase64} from 'utils'
 
 function HeroGlow() {
 	return (
@@ -11,7 +12,7 @@ function HeroGlow() {
           <div className="relative flex flex-col items-start justify-between space-y-8">
             <div>
               <div className="w-28 h-28 bg-white p-1 rounded-full sm:ml-5 md:ml-10 overflow-hidden outline outline-2 outline-black outline-offset-2">
-                <Image src="/mypic.png" width="300" height="300" layout="responsive"/>
+                <Image src="/mypic.png" width="300" height="300" layout="responsive" placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 600))}`}/>
               </div>
             </div>
             <div className="mx-0 sm:mx-5 md:mx-10">
