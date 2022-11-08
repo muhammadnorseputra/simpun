@@ -2,7 +2,8 @@ import Image from 'next/image'
 import { GithubIcon, FigmaIcon, TwitterIcon, IgIcon, FbIcon, DownloadIcon } from '../icons'
 import {shimmer, toBase64} from 'utils'
 
-function HeroGlow() {
+function HeroGlow( { me }: any ) {
+  const { intro, tagline, description } = me[0]
 	return (
 		<section>
         <div className="px-4 py-12 relative bg-white/60 overflow-hidden z-0">
@@ -16,28 +17,28 @@ function HeroGlow() {
               </div>
             </div>
             <div className="mx-0 sm:mx-5 md:mx-10">
-              <h1 className="text-xl tracking-normal font-bold text-black">Hi, I am Putra</h1>
-              <p className="text-3xl tracking-normal font-bold py-2 text-green-600">Fullstack Web Developer &amp; Grafic Desainer</p>
-              <p className="tracking-wider md:text-md leading-6 text-black/50"> Have experience in web developer since 2018. <br/>I have developed many web-apps using PHP native, CI Framework, Laravel Framework, Bootsrap, ReactJS, etc ... </p>
+              <h1 className="text-xl tracking-normal font-bold text-black">{intro}</h1>
+              <p className="text-3xl tracking-normal font-bold py-2 text-green-600">{tagline}</p>
+              <p className="tracking-wider md:text-md leading-6 text-black/50"> {description} </p>
               <div className="flex items-end justify-start">
               <div>
-                <a href="#" className="px-3 py-2 text-sm transition-all ease-out text-green-200 mt-4 hover:shadow-lg hover:shadow-green-300 rounded-full bg-green-600 text-white inline-flex items-center justify-between gap-x-3 divide-x divide-green-500"><DownloadIcon className="w-6 h-6 text-green-400"/> <span className="pl-2 truncate">Download CV</span></a>
+                <a href="https://www.goodcv.com/cv/7f5d247b795ccf1c49c7711290e1fc7f" target="_blank" className="px-3 py-2 text-sm transition-all ease-out text-green-200 mt-4 hover:shadow-lg hover:shadow-green-300 rounded-full bg-green-600 text-white inline-flex items-center justify-between gap-x-3 divide-x divide-green-500"><DownloadIcon className="w-6 h-6 text-green-400"/> <span className="pl-2 truncate">Download CV</span></a>
               </div>
               <ul className="flex justify-between items-center gap-x-1 sm:gap-x-2 ml-2">
                 <li className="group">
-                  <a href="#"><GithubIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-slate-400 group-hover:shadow-lg group-hover:shadow-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-110 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="https://github.com/muhammadnorseputra" target="_blank"><GithubIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-slate-400 group-hover:shadow-lg group-hover:shadow-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
                 </li>
                 <li className="group">
-                  <a href="#"><FigmaIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-600 group-hover:shadow-lg group-hover:shadow-violet-400 group-hover:fill-violet-400 origin-bottom group-hover:scale-110 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><FigmaIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-600 group-hover:shadow-lg group-hover:shadow-violet-400 group-hover:fill-violet-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
                 </li>
                 <li className="group">
-                  <a href="#"><TwitterIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-600 group-hover:shadow-lg group-hover:shadow-blue-400 group-hover:fill-blue-400 origin-bottom group-hover:scale-110 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><TwitterIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-600 group-hover:shadow-lg group-hover:shadow-blue-400 group-hover:fill-blue-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
                 </li>
                 <li className="group">
-                  <a href="#"><IgIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-800 group-hover:shadow-lg group-hover:shadow-violet-800 group-hover:fill-red-200 origin-bottom group-hover:scale-110 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><IgIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-800 group-hover:shadow-lg group-hover:shadow-violet-800 group-hover:fill-red-200 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
                 </li>
                 <li className="group">
-                  <a href="#"><FbIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-900 group-hover:shadow-lg group-hover:shadow-blue-800 group-hover:fill-blue-800 origin-bottom group-hover:scale-110 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><FbIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-900 group-hover:shadow-lg group-hover:shadow-blue-800 group-hover:fill-blue-800 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
                 </li>
               </ul>
               </div>

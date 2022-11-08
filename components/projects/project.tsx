@@ -5,6 +5,10 @@ import Slider from "react-slick";
 import { CollectionIcon } from "@heroicons/react/outline";
 import Image from 'next/image'
 import {shimmer, toBase64} from 'utils'
+import Link from "next/link";
+import {
+  ExternalLinkIcon,
+} from "@heroicons/react/outline";
 
 export default function Project({ projects }: any) {
   const settings = {
@@ -16,7 +20,7 @@ export default function Project({ projects }: any) {
     slidesToShow: 1,
     centerMode: false,
     slidesToScroll: 1,
-    arrows: false
+    arrows: true
   };
 
   return (
@@ -38,7 +42,12 @@ export default function Project({ projects }: any) {
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(800, 390))}`}
             />
-            <div className="px-4 py-1 rounded-full bg-green-300 text-xs my-2 inline-block">{project.technology}</div>
+            <div className="flex justify-between items-center">
+              <div className="px-4 py-1 rounded-full bg-green-300 text-xs my-2 inline-block">{project.technology}</div>
+              <Link href={project.url} legacyBehavior>
+                <a target="_blank" className="hover:text-blue-600"><ExternalLinkIcon className="w-5 h-5"/></a>
+              </Link>
+            </div>
             <h2 className="font-bold text-xl">{project.title}</h2>
           </div>
           ))}

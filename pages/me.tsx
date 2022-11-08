@@ -12,7 +12,8 @@ import Projects from "@/components/projects/project"
 import Footer from "@/components/layouts/footer";
 
 const Me: NextPage = ({ resource }: any) => {
-  const { projects, studys, hobbys } = resource;
+  const { projects, studys, hobbys, carriers, me } = resource;
+
   return (
     <div className="container mx-auto max-w-full md:max-w-xl md:shadow-2xl">
       <div className="bg-white min-h-screen shadow-3xl">
@@ -23,9 +24,9 @@ const Me: NextPage = ({ resource }: any) => {
 
         <Header />
         <Navbar />
-        <HeroGlow />
+        <HeroGlow me={me}/>
         <Study studys={studys}/>
-        <Cariers />
+        <Cariers carriers={carriers}/>
         <Skills />
         <Projects projects={projects}/>
         <Hobbys hobbys={hobbys}/>
@@ -37,7 +38,16 @@ const Me: NextPage = ({ resource }: any) => {
 
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getServerSideProps({ req }: any) {
+  const isSpalshScreen = req.cookies.splashscreen
+  if(isSpalshScreen === 'false' || isSpalshScreen === undefined) {
+    return {
+      redirect: {
+        permanent: true,
+        destination: '/',
+      },
+    };
+  }
   // Fetch data from external API
   const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/db.json`)
   const resource = await response.json()

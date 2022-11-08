@@ -1,19 +1,20 @@
-import { AcademicCapIcon } from "@heroicons/react/outline";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Image from 'next/image'
 
 function Hobby({hobbys}: any) {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 600,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     centerMode: true,
     slidesToScroll: 1,
-    arrows: false
+    arrows: false,
+    // adaptiveHeight: true
   };
 
   return (
@@ -25,15 +26,14 @@ function Hobby({hobbys}: any) {
         <Slider {...settings} className="pt-5">
           {
           hobbys.map((hobby: any) => (
-            // const { id, title, description } = hobby;
           
-          <div key={hobby.id} className="px-2">
+          <div key={hobby.id} className="px-3">
             <div className="bg-slate-600 rounded-2xl overflow-hidden flex justify-between items-center p-2">
-            <div>
+            <div className="pl-3">
               <h3 className="font-bold text-white text-xl">{hobby.title}</h3>
               <p className="text-gray-400">{hobby.description}</p>
             </div>
-            <AcademicCapIcon className="w-32 h-32 stroke-1 stroke-slate-100/30 fill-slate-200/30" />
+            <Image src={hobby.image} title={hobby.title} width={90} height={90}/>
             </div>
           </div>
           ))}

@@ -10,28 +10,28 @@ export default function Navbar() {
         <nav className="border-b-4 border-gray-200 sticky top-0 bg-white/80 backdrop-blur-lg z-20">
           <ul className="flex justify-between items-center">
             <li className="w-full text-center">
-              <Link href="/" passHref>
+              <Link href="/me" passHref>
                 <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
                   Up
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
-              <Link href="/#cariers" passHref>
+              <Link href="/me/#cariers" passHref scroll={false}>
                 <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
                   Cariers
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
-              <Link href="/#skills" passHref>
+              <Link href="/me/#skills" passHref scroll={false}>
                 <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
                   Skills
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
-              <Link href="/#projects" passHref>
+              <Link href="/me/#projects" passHref scroll={false}>
                 <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
                   Projects
                 </a>

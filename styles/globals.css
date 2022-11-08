@@ -5,6 +5,7 @@
 	--twc-secondary: #354F52;
 	--twc-primary: #2F3E46;	
 	--twc-gray: #aeaeae;	
+  --twc-blue: #56A3A6;
 }
 
 @tailwind base;
