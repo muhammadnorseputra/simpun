@@ -16,11 +16,10 @@ html, body {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	background-color: var(--twc-natural);
 }
 @layer components {
   .navigation-effect {
-    @apply before:transition-all before:ease-in-out before:duration-300 before:absolute before:right-1/2 before:-bottom-1 before:block before:rounded-l before:h-1 before:w-0 before:hover:w-1/2 before:bg-green-600 after:transition-all after:ease-in-out after:duration-300 after:absolute after:left-1/2 after:-bottom-1 after:block after:rounded-r after:h-1 after:w-0 after:hover:w-1/2 after:bg-green-600;
+    @apply before:transition-all before:ease-in-out before:duration-300 before:absolute before:right-1/2 before:-bottom-1 before:block before:rounded-l before:h-1 before:w-0 before:hover:w-1/2 before:bg-green-600 dark:before:bg-green-400 after:transition-all after:ease-in-out after:duration-300 after:absolute after:left-1/2 after:-bottom-1 after:block after:rounded-r after:h-1 after:w-0 after:hover:w-1/2 after:bg-green-600 dark:after:bg-green-400;
   }
 }
 

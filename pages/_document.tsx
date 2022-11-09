@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
       <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/> 
       </Head>
-      <body>
+      <body className="bg-gray-100 dark:bg-slate-900">
         <Main />
         <NextScript />
       </body>

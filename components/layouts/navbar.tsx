@@ -1,45 +1,47 @@
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
+
 import { Fragment } from "react";
 import {
     DotsCircleHorizontalIcon,
   } from "@heroicons/react/outline";
   
 export default function Navbar() {
+   
     return (
-        <nav className="border-b-4 border-gray-200 sticky top-0 bg-white/80 backdrop-blur-lg z-20">
+        <nav className="border-b-4 border-gray-200 dark:border-black/60 sticky top-0 bg-white/80 dark:bg-slate-900 backdrop-blur-lg z-20">
           <ul className="flex justify-between items-center">
             <li className="w-full text-center">
               <Link href="/me" passHref>
-                <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
                   Up
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#cariers" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
                   Cariers
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#skills" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
                   Skills
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#projects" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
                   Projects
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Menu as="div" className="relative inline-block">
-                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 rounded-t-2xl p-4 relative navigation-effect">
+                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
                   <DotsCircleHorizontalIcon className="w-6 h-6 text-gray-400" />{" "}
                   More{" "}
                 </Menu.Button>
