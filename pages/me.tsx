@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-
 import Header from "@/components/layouts/header";
 import Navbar from "@/components/layouts/navbar";
 import HeroGlow from "@/components/heros/hero-glow";
@@ -13,16 +12,15 @@ import Footer from "@/components/layouts/footer";
 
 const Me: NextPage = ({ resource }: any) => {
   const { projects, studys, hobbys, carriers, me } = resource;
-
   return (
     <div className="container mx-auto max-w-full md:max-w-xl md:shadow-2xl">
-      <div className="bg-white min-h-screen shadow-3xl">
+      <div className="bg-white dark:bg-slate-500 min-h-screen shadow-3xl">
         <Head>
           <title>@mnorsaputra - portofolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Header />
+        <Header/>
         <Navbar />
         <HeroGlow me={me}/>
         <Study studys={studys}/>
@@ -35,7 +33,6 @@ const Me: NextPage = ({ resource }: any) => {
     </div>
   );
 };
-
 
 // This gets called on every request
 export async function getServerSideProps({ req }: any) {

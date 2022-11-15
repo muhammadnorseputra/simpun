@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
-
 import { Fragment } from "react";
 import {
     DotsCircleHorizontalIcon,
@@ -9,7 +8,7 @@ import {
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 border-gray-200 dark:border-black/60 sticky top-0 bg-white/80 dark:bg-slate-900 backdrop-blur-lg z-20">
+        <nav className="border-b-4 border-gray-200 dark:border-black/60 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg z-20">
           <ul className="flex justify-between items-center">
             <li className="w-full text-center">
               <Link href="/me" passHref>

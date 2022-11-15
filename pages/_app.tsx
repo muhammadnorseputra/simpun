@@ -1,9 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from "next-themes";
+import {
+  RecoilRoot,
+  } from 'recoil';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class"><Component {...pageProps} /></ThemeProvider>
+  return <RecoilRoot><ThemeProvider enableSystem={true} defaultTheme="system" attribute="class"><Component {...pageProps} /></ThemeProvider></RecoilRoot>
 }
 
 export default MyApp
