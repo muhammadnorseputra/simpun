@@ -13,27 +13,7 @@ function Hobby({hobbys}: any) {
     slidesToShow: 1,
     centerMode: true,
     slidesToScroll: 1,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: 0
-        }
-      }
-    ]
-    // adaptiveHeight: true
+    arrows: false
   };
 
   return (
