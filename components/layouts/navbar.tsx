@@ -56,28 +56,32 @@ export default function Navbar() {
                   <Menu.Items className="absolute right-2 mt-2 pb-1 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
                     <Menu.Item>
                       {({ active }) => (
-                        <button
-                          className={`${
-                            active
-                              ? "bg-gray-100 text-gray-600"
-                              : "text-gray-900"
-                          } group relative flex w-full items-center p-4 navigation-effect`}
-                        >
-                          Certificates
-                        </button>
+                        <Link href="/certificates" passHref>
+                          <button
+                            className={`${
+                              active
+                                ? "bg-gray-100 text-gray-600"
+                                : "text-gray-900"
+                            } group relative flex w-full items-center p-4 navigation-effect`}
+                          >
+                            Certificates
+                          </button>
+                        </Link>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button
-                          className={`${
-                            active
-                              ? "bg-gray-100 text-gray-600"
-                              : "text-gray-900"
-                          } group relative flex w-full items-center p-4 navigation-effect`}
-                        >
-                          Blog
-                        </button>
+                        <Link href="/blogs" passHref>
+                          <button
+                            className={`${
+                              active
+                                ? "bg-gray-100 text-gray-600"
+                                : "text-gray-900"
+                            } group relative flex w-full items-center p-4 navigation-effect`}
+                          >
+                            Blog
+                          </button>
+                        </Link>
                       )}
                     </Menu.Item>
                   </Menu.Items>
