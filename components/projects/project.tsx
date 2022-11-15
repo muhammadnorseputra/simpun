@@ -24,8 +24,8 @@ export default function Project({ projects }: any) {
   };
 
   return (
-    <section id="projects">
-      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10">
+    <section id="projects" className='overflow-x-hidden'>
+      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="500">
         <CollectionIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -right-20 -bottom-10" />
         <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
           Project

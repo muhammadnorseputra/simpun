@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { useRecoilState } from 'recoil'
 import { openState } from 'atoms';
 import MyDialog from 'components/modal';
+import Link from "next/link";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -12,13 +13,15 @@ export default function Header() {
     <header>
       <div className="flex items-center justify-between p-4 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-900/80">
         {/* Logo */}
-        <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-gray-800 dark:text-white text-2xl font-bold">
+        <Link href="/me">
+        <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-gray-800 dark:text-white text-2xl font-bold hover:cursor-pointer">
           <div>
             <span className="text-green-700 dark:text-green-300">@</span>mnors
             <span className="text-green-700 dark:text-green-300">a</span>putr
             <span className="text-green-700 dark:text-green-300">a</span>
           </div>
         </div>
+        </Link>
         {/* More */}
         <div>
           <button

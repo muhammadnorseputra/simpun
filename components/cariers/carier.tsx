@@ -3,7 +3,7 @@ import { ShareIcon } from "@heroicons/react/outline";
 export default function Carier({carriers}: any) {
   return (
     <section id="cariers" className='overflow-x-hidden'>
-      <div className="relative px-6 py-8 overflow-hidden bg-white dark:bg-slate-700 rounded-b-3xl z-10">
+      <div className="relative px-6 py-8 overflow-hidden bg-white dark:bg-slate-700 z-10" data-aos="fade-down" data-aos-delay="500">
         <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
           Carier
         </h2>
