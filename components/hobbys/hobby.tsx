@@ -14,6 +14,25 @@ function Hobby({hobbys}: any) {
     centerMode: true,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: 0
+        }
+      }
+    ]
     // adaptiveHeight: true
   };
 
@@ -27,7 +46,7 @@ function Hobby({hobbys}: any) {
           {
           hobbys.map((hobby: any) => (
           
-          <div key={hobby.id} className="px-3">
+          <div key={hobby.id} className="md:px-3">
             <div className="bg-slate-600 rounded-2xl overflow-hidden flex justify-between items-center p-2">
             <div className="pl-3">
               <h3 className="font-bold text-white text-xl">{hobby.title}</h3>
