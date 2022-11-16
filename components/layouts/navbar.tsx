@@ -56,7 +56,7 @@ export default function Navbar() {
                   <Menu.Items className="absolute right-2 mt-2 pb-1 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/certificates" passHref>
+                        <Link href="/certificates">
                           <button
                             className={`${
                               active
@@ -71,7 +71,7 @@ export default function Navbar() {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/blogs" passHref>
+                        <Link href="/blogs">
                           <button
                             className={`${
                               active

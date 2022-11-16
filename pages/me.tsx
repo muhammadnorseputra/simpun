@@ -45,15 +45,6 @@ const Me: NextPage = ({ resource }: any) => {
 
 // This gets called on every request
 export async function getServerSideProps({ req }: any) {
-  const isSpalshScreen = req.cookies.splashscreen
-  if(isSpalshScreen === 'false' || isSpalshScreen === undefined) {
-    return {
-      redirect: {
-        permanent: true,
-        destination: '/',
-      },
-    };
-  }
   // Fetch data from external API
   const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/db.json`)
   const resource = await response.json()
