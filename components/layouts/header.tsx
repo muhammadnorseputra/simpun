@@ -1,13 +1,15 @@
 import { LightBulbIcon, CogIcon, MoonIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
 import { useRecoilState } from 'recoil'
-import { openState } from 'atoms';
+import { openStateModal } from 'atoms';
 import MyDialog from 'components/modal';
 import Link from "next/link";
 
+
 export default function Header() {
   const { theme, setTheme } = useTheme();
-  const [isOpen, setIsOpen] = useRecoilState(openState)
+  const [isOpen, setIsOpen] = useRecoilState(openStateModal)
+
   return (
     <>
     <header>
@@ -24,11 +26,24 @@ export default function Header() {
         </Link>
         {/* More */}
         <div>
+          {/* <button
+            onClick={toggleAudio}
+            type="button"
+            role="button"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600"
+          >
+            {isPlay 
+            ? 
+            <MusicNoteIcon className="w-6 h-6 text-gray-700 focus:text-blue-200 animate-pulse duration-1000 ease-linear" />
+            :
+            <VolumeOffIcon className="w-6 h-6 text-gray-500 focus:text-blue-200" />
+            }
+          </button> */}
           <button
             onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}
             type="button"
             role="button"
-            className="p-2 mr-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600"
+            className="p-2 mx-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600"
           >
             {theme === 'light' ? <MoonIcon className="w-6 h-6 text-gray-500 fill-slate-400"/> : <LightBulbIcon className="w-6 h-6 text-gray-500 stroke-amber-200 fill-amber-500" />}
           </button>

@@ -1,11 +1,11 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from '@headlessui/react'
 import { useRecoilState } from 'recoil'
-import { openState } from 'atoms'
+import { openStateModal } from 'atoms'
 import Image from "next/image";
 import Maintenance from '../public/maintenance.png'
 function MyDialog() {
-  const [isOpen, setIsOpen] = useRecoilState(openState)
+  const [isOpen, setIsOpen] = useRecoilState(openStateModal)
   
     const closeModal = () => {
       setIsOpen(false)
