@@ -7,6 +7,7 @@ export default function middleware(request: NextRequest) {
   if(isSpalshScreen === 'false' || isSpalshScreen === undefined) {
     return NextResponse.rewrite(new URL('/', request.url))
   }
+  return NextResponse.next()
 }
 
 export const config = {
