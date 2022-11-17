@@ -1,12 +1,12 @@
 import {
-    ArrowSmUpIcon,
+    ArrowSmUpIcon, HeartIcon,
   } from "@heroicons/react/outline";
 export default function Footer() {
     return (
         <footer>
-          <div className="relative px-6 py-6 bg-slate-700 flex justify-between items-center border-t border-slate-800">
+          <div className="relative px-6 py-6 bg-gradient-to-b from-slate-700 to-slate-900 flex justify-between items-center border-t border-slate-800">
             <p className="text-white font-medium">
-              Copyright 2022 - @mnorsaputra
+              Made with <HeartIcon className="w-4 h-4 fill-red-500 stroke-red-600 animate-pulse inline"/> @mnorsaputra
             </p>
             <button
               role="button"
@@ -17,7 +17,7 @@ export default function Footer() {
                   behavior: "smooth",
                 });
               }}
-              className="p-2 bg-slate-800 rounded-full group transition-all duration-700 shadow-sm shadow-slate-600 hover:shadow-md hover:shadow-slate-500"
+              className="p-2 bg-slate-800 rounded-full group transition-all duration-700 shadow-sm"
             >
               <ArrowSmUpIcon className="w-6 h-6 text-slate-100 transition-all ease-out group-hover:text-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-110 group-hover:animate-bounce" />
             </button>

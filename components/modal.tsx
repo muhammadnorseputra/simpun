@@ -45,7 +45,7 @@ function MyDialog() {
                       Comming Soon !
                     </Dialog.Title>
                     <div className="mt-2">
-                      <Image src={Maintenance} width={400} height={240} alt="maintenance featured"/>
+                      <Image src={Maintenance} width={400} height={240} placeholder="blur" alt="maintenance featured"/>
                     </div>
   
                     <div className="mt-4 flex items-center justify-center">

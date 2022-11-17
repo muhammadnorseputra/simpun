@@ -2,16 +2,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from 'next/image'
+import { shimmer, toBase64 } from "@/utils/index";
 
 function Hobby({hobbys}: any) {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
-    centerMode: true,
+    centerMode: false,
     slidesToScroll: 1,
     arrows: false
   };
@@ -26,13 +27,13 @@ function Hobby({hobbys}: any) {
           {
           hobbys.map((hobby: any) => (
           
-          <div key={hobby.id} className="md:px-3">
+          <div key={hobby.id}>
             <div className="bg-slate-600 rounded-2xl overflow-hidden flex justify-between items-center p-2">
             <div className="pl-3">
               <h3 className="font-bold text-white text-xl">{hobby.title}</h3>
               <p className="text-gray-400">{hobby.description}</p>
             </div>
-            <Image src={hobby.image} title={hobby.title} width={90} height={90}/>
+            <Image src={hobby.image} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(90, 90))}`} title={hobby.title} width={90} height={90}/>
             </div>
           </div>
           ))}

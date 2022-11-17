@@ -14,9 +14,9 @@ import { useRef } from "react";
 export default function Project({ projects }: any) {
   const slider = useRef<any>(null);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 800,
+    speed: 600,
     autoplay: true,
     autoplaySpeed: 4000,
     slidesToShow: 1,
@@ -27,7 +27,7 @@ export default function Project({ projects }: any) {
 
   return (
     <section id="projects" className='overflow-x-hidden'>
-      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="500">
+      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="150">
         <CollectionIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -right-20 -bottom-10" />
         <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
           Project
@@ -35,7 +35,7 @@ export default function Project({ projects }: any) {
         <Slider ref={slider} {...settings} className="pt-5">
           {projects.map((project: any) => (
           <div key={project.id}>
-            <div className="px-2 rounded-xl">
+            <div className="md:px-2 rounded-xl">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_API}/${project.screenshoot[0].source}`}
               alt={project.title}
@@ -46,18 +46,18 @@ export default function Project({ projects }: any) {
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(800, 390))}`}
             />
             </div>
-            <div className="flex justify-between items-center px-5">
-              <div className="px-4 py-1 rounded-full bg-green-300 text-black text-xs my-2 inline-block">{project.technology}</div>
+            <div className="flex justify-between items-center md:px-5">
+              <div className="px-2 md:px-4 py-1 rounded-full bg-green-300 text-black text-xs my-2 inline-block">{project.technology}</div>
               <Link href={project.url} legacyBehavior>
-                <a target="_blank" className="hover:text-blue-500 p-2 text-white bg-black/40 rounded-full right-1 relative"><ExternalLinkIcon className="w-5 h-5"/></a>
+                <a target="_blank" className="hover:text-blue-500 p-2 text-white bg-black/40 rounded-full right-1 relative" data-aos="fade-up" data-aos-delay="150"><ExternalLinkIcon className="w-5 h-5"/></a>
               </Link>
             </div>
-            <h2 className="font-bold text-xl px-5">{project.title}</h2>
+            <h2 className="font-bold text-xl md:px-5">{project.title}</h2>
           </div>
           ))}
         </Slider>
-        <button onClick={() => slider?.current?.slickNext()} className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
-        <button onClick={() => slider?.current?.slickPrev()} className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
       </div>
     </section>
   );
