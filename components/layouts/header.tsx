@@ -45,7 +45,7 @@ export default function Header() {
             role="button"
             className="p-2 mx-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600"
           >
-            {theme === 'light' ? <MoonIcon className="w-6 h-6 text-gray-500 fill-slate-400"/> : <LightBulbIcon className="w-6 h-6 text-gray-500 stroke-amber-200 fill-amber-500" />}
+            {theme === 'light' ? <MoonIcon className="w-6 h-6 text-gray-500 fill-slate-400"/> : <LightBulbIcon className="w-6 h-6 text-gray-500 stroke-amber-400 fill-amber-500" />}
           </button>
           <button
             onClick={() => setIsOpen(true)}

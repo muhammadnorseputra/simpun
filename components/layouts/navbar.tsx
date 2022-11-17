@@ -2,18 +2,18 @@ import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import {
-    DotsCircleHorizontalIcon,
+    DotsCircleHorizontalIcon, HomeIcon,
   } from "@heroicons/react/outline";
   
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 border-gray-200 dark:border-black/60 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg z-20">
-          <ul className="flex justify-between items-center">
-            <li className="w-full text-center">
+        <nav className="border-b-4 border-gray-200 dark:border-slate-700/60 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg z-20">
+          <ul className="flex justify-center items-center align-middle md:ml-3">
+            <li className="text-center">
               <Link href="/me" passHref>
-                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
-                  Up
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                  <HomeIcon className="w-6 h-6 text-amber-500"/>
                 </a>
               </Link>
             </li>
@@ -56,7 +56,7 @@ export default function Navbar() {
                   <Menu.Items className="absolute right-2 mt-2 pb-1 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/certificates">
+                        <Link href="/certificates" legacyBehavior={false}>
                           <button
                             className={`${
                               active
@@ -71,7 +71,7 @@ export default function Navbar() {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/blogs">
+                        <Link href="/blogs" legacyBehavior={false}>
                           <button
                             className={`${
                               active
