@@ -13,7 +13,7 @@ export default function Navbar() {
             <li className="text-center">
               <Link href="/me" passHref>
                 <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
-                  <HomeIcon className="w-6 h-6 text-amber-500"/>
+                  <HomeIcon className="w-6 h-6 text-gray-600 dark:text-amber-500"/>
                 </a>
               </Link>
             </li>

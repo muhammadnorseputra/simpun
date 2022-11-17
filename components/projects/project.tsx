@@ -2,15 +2,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import { CollectionIcon } from "@heroicons/react/outline";
+import { ArrowCircleLeftIcon, ArrowCircleRightIcon, CollectionIcon } from "@heroicons/react/outline";
 import Image from 'next/image'
 import {shimmer, toBase64} from 'utils'
 import Link from "next/link";
 import {
   ExternalLinkIcon,
 } from "@heroicons/react/outline";
+import { useRef } from "react";
 
 export default function Project({ projects }: any) {
+  const slider = useRef<any>(null);
   const settings = {
     dots: true,
     infinite: true,
@@ -20,7 +22,7 @@ export default function Project({ projects }: any) {
     slidesToShow: 1,
     centerMode: false,
     slidesToScroll: 1,
-    arrows: true
+    arrows: false
   };
 
   return (
@@ -30,9 +32,10 @@ export default function Project({ projects }: any) {
         <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
           Project
         </h2>
-        <Slider {...settings} className="pt-5">
+        <Slider ref={slider} {...settings} className="pt-5">
           {projects.map((project: any) => (
           <div key={project.id}>
+            <div className="px-2 rounded-xl">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_API}/${project.screenshoot[0].source}`}
               alt={project.title}
@@ -42,16 +45,19 @@ export default function Project({ projects }: any) {
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(800, 390))}`}
             />
-            <div className="flex justify-between items-center">
-              <div className="px-4 py-1 rounded-full bg-green-300 text-xs my-2 inline-block">{project.technology}</div>
+            </div>
+            <div className="flex justify-between items-center px-5">
+              <div className="px-4 py-1 rounded-full bg-green-300 text-black text-xs my-2 inline-block">{project.technology}</div>
               <Link href={project.url} legacyBehavior>
-                <a target="_blank" className="hover:text-blue-600"><ExternalLinkIcon className="w-5 h-5"/></a>
+                <a target="_blank" className="hover:text-blue-500 p-2 text-white bg-black/40 rounded-full right-1 relative"><ExternalLinkIcon className="w-5 h-5"/></a>
               </Link>
             </div>
-            <h2 className="font-bold text-xl">{project.title}</h2>
+            <h2 className="font-bold text-xl px-5">{project.title}</h2>
           </div>
           ))}
         </Slider>
+        <button onClick={() => slider?.current?.slickNext()} className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
       </div>
     </section>
   );
