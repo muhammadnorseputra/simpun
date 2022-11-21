@@ -29,7 +29,7 @@ export default function Project({ projects }: any) {
     <section id="projects" className='overflow-x-hidden'>
       <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="150">
         <CollectionIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -right-20 -bottom-10" />
-        <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
+        <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-400 before:animate-pulse">
           Project
         </h2>
         <Slider ref={slider} {...settings} className="pt-5">
@@ -52,7 +52,7 @@ export default function Project({ projects }: any) {
                 <a target="_blank" className="hover:text-blue-500 p-2 text-white bg-black/40 rounded-full right-1 relative" data-aos="fade-up" data-aos-delay="150"><ExternalLinkIcon className="w-5 h-5"/></a>
               </Link>
             </div>
-            <h2 className="font-bold text-xl md:px-5">{project.title}</h2>
+            <h2 className="font-bold text-xl md:px-5" data-aos="fade-right" data-aos-delay="300">{project.title}</h2>
           </div>
           ))}
         </Slider>
