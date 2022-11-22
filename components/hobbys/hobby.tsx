@@ -3,10 +3,13 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from 'next/image'
 import { shimmer, toBase64 } from "@/utils/index";
+import { ArrowCircleRightIcon, ArrowCircleLeftIcon } from "@heroicons/react/outline";
+import { useRef } from "react";
 
 function Hobby({hobbys}: any) {
+  const slider = useRef<any>(null);
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 600,
     autoplay: true,
@@ -19,11 +22,11 @@ function Hobby({hobbys}: any) {
 
   return (
     <section className="overflow-hidden">
-      <div className="relative px-6 py-8 bg-blue-700" data-aos="fade-up">
+      <div className="relative px-6 py-8 bg-gradient-to-t from-blue-700 to-blue-500" data-aos="fade-up">
         <h2 className="inline text-2xl font-bold text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-white before:animate-pulse">
           Hobby
         </h2>
-        <Slider {...settings} className="pt-5">
+        <Slider ref={slider} {...settings} className="pt-5">
           {
           hobbys.map((hobby: any) => (
           
@@ -38,6 +41,9 @@ function Hobby({hobbys}: any) {
           </div>
           ))}
         </Slider>
+        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+
       </div>
     </section>
   );

@@ -27,9 +27,9 @@ export default function Project({ projects }: any) {
 
   return (
     <section id="projects" className='overflow-x-hidden'>
-      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-slate-800 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="150">
+      <div className="relative px-6 py-8 min-h-[300px] bg-white dark:bg-blue-500 shadow-t-2xl -mt-5 rounded-t-2xl rounded-b-2xl dark:rounded-b-none overflow-hidden z-10" data-aos="fade-in" data-aos-delay="150">
         <CollectionIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -right-20 -bottom-10" />
-        <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-400 before:animate-pulse">
+        <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-white before:animate-pulse">
           Project
         </h2>
         <Slider ref={slider} {...settings} className="pt-5">
@@ -56,8 +56,8 @@ export default function Project({ projects }: any) {
           </div>
           ))}
         </Slider>
-        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
-        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 shadow-md shadow-gray-200 dark:shadow-gray-700 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
       </div>
     </section>
   );

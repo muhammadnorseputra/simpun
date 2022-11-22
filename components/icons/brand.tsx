@@ -6,7 +6,7 @@ export const Skill: any = ({ type }: ISkill) => {
   if (type === "boostrap") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         height={100}
         viewBox="0 0 512 407.864"
         width={100}
@@ -22,7 +22,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "codeigniter") {
     return (
       <svg
-        className="w-20 mt-8 animate-bounce-y"
+        className="w-20 mt-8 animate-bounce-y animate-reduce"
         width={100}
         height={100}
         viewBox="-24 0 304 304"
@@ -38,7 +38,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "cpanel") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         width={100}
         height={100}
         viewBox="0 0 512 114"
@@ -54,7 +54,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "css3") {
     return (
       <svg
-        className="w-12 animate-bounce-y"
+        className="w-12 animate-bounce-y animate-reduce"
         fill="none"
         height={100}
         width={100}
@@ -78,7 +78,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "figma") {
     return (
       <svg
-        className="w-12 animate-bounce-y"
+        className="w-12 animate-bounce-y animate-reduce"
         height={100}
         viewBox="0 0 200 300"
         width={100}
@@ -109,7 +109,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "firebase") {
     return (
       <svg
-        className="w-12 animate-bounce-y"
+        className="w-12 animate-bounce-y animate-reduce"
         width={100}
         height={100}
         viewBox="0 0 256 351"
@@ -219,7 +219,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "html") {
     return (
       <svg
-        className="w-12 animate-bounce-y"
+        className="w-12 animate-bounce-y animate-reduce"
         fill="none"
         height={100}
         width={100}
@@ -243,7 +243,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "javascript") {
     return (
       <svg
-        className="w-12 animate-bounce-y"
+        className="w-12 animate-bounce-y animate-reduce"
         fill="none"
         height={100}
         width={100}
@@ -266,7 +266,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "jquery") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         xmlns="http://www.w3.org/2000/svg"
         width={100}
         height={100}
@@ -321,7 +321,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "laravel") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         height={100}
         viewBox="0 -.11376601 49.74245785 51.31690859"
         width={100}
@@ -336,7 +336,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "mysql") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         xmlns="http://www.w3.org/2000/svg"
         width={100}
         height={100}
@@ -366,7 +366,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "photoshop") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         xmlns="http://www.w3.org/2000/svg"
         width={100}
         height={100}
@@ -396,7 +396,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "php") {
     return (
       <svg
-        className="w-20 mt-20 animate-bounce-y"
+        className="w-20 mt-20 animate-bounce-y animate-reduce"
         width={100}
         height={100}
         viewBox="0 0 256 134"
@@ -415,7 +415,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "sass") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         xmlns="http://www.w3.org/2000/svg"
         width={100}
         height={100}
@@ -430,7 +430,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "vscode") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         height={100}
         viewBox="-11.9 -2 1003.9 995.6"
         width={100}
@@ -457,7 +457,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "xampp") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         width={100}
         height={100}
         viewBox="0 0 256 258"
@@ -478,7 +478,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "reactjs") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         width="100"
         height="100"
         viewBox="0 0 24 24"
@@ -496,7 +496,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "nextjs") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         width="100"
         height="100"
         viewBox="0 -101.5 512 512"
@@ -517,7 +517,7 @@ export const Skill: any = ({ type }: ISkill) => {
   } else if (type === "tailwindcss") {
     return (
       <svg
-        className="w-20 animate-bounce-y"
+        className="w-20 animate-bounce-y animate-reduce"
         width="100"
         height="100"
         viewBox="0 -51 256 256"

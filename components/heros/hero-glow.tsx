@@ -7,9 +7,9 @@ function HeroGlow( { me }: any ) {
 	return (
 		<section>
         <div className="px-4 py-12 relative bg-white/60 dark:bg-black/60 overflow-hidden z-0">
-          <div className="w-72 h-72 animate-debouce rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-amber-200 top-12 left-1/2 mix-blend-multiply"></div>
-          <div className="w-72 h-72 animate-debouce animate-delay-2000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-pink-200 bottom-12 left-1/4 mix-blend-multiply"></div>
-          <div className="w-72 h-72 animate-debouce animate-delay-4000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-violet-200 top-4 right-1/2 mix-blend-multiply"></div>
+          <div className="w-72 h-72 animate-debouce animate-reduce rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-amber-200 top-12 left-1/2 mix-blend-multiply"></div>
+          <div className="w-72 h-72 animate-debouce animate-reduce animate-delay-2000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-pink-200 bottom-12 left-1/4 mix-blend-multiply"></div>
+          <div className="w-72 h-72 animate-debouce animate-reduce animate-delay-4000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-violet-200 top-4 right-1/2 mix-blend-multiply"></div>
           <div className="relative flex flex-col items-start justify-between space-y-8">
             <div>
               <div className="w-28 h-28 bg-white p-1 rounded-full sm:ml-5 md:ml-10 overflow-hidden outline outline-2 outline-black outline-offset-2" data-aos="fade-down">

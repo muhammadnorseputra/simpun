@@ -16,7 +16,7 @@ function HeroGradient() {
               <p className="tracking-wider font-bold py-2 text-green-700">Fullstack Web Developer &amp; Desainer</p>
               <p className="tracking-wider md:text-md leading-6"> Have experience in web developer since 2018. <br/>I have developed many web-apps using PHP native, CI Framework, Laravel Framework, Bootsrap, ReactJS, etc ... </p>
               <div className="flex items-end justify-start">
-              <a href="#" className="px-3 py-2 text-sm text-green-200 mt-4 hover:shadow-lg hover:shadow-green-300 rounded-full bg-green-600 text-white inline-flex items-center justify-between gap-x-3 divide-x divide-green-500"><DownloadIcon className="w-6 h-6 text-green-400"/> <span className="pl-2">Download CV</span></a>
+              <a href="#" className="px-3 py-2 text-sm mt-4 hover:shadow-lg hover:shadow-green-300 rounded-full bg-green-600 text-white inline-flex items-center justify-between gap-x-3 divide-x divide-green-500"><DownloadIcon className="w-6 h-6 text-green-400"/> <span className="pl-2">Download CV</span></a>
                 <ul className="flex justify-between items-center gap-x-2 ml-2">
                   <li>
                     <a href="#"><GithubIcon className="w-10 h-10 text-black bg-white/30 backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
