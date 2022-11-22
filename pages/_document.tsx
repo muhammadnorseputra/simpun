@@ -19,9 +19,9 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
         <link rel="manifest" href="/favicons/manifest.json"/>
-        <meta name="msapplication-TileColor" content="#56A3A6"/>
+        <meta name="msapplication-TileColor" content="#16a34a"/>
         <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png"/>
-        <meta name="theme-color" content="#56A3A6"/>
+        <meta name="theme-color" content="#16a34a"/>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/> 
       </Head>
       <body className="bg-gray-100 dark:bg-slate-900 transition-colors duration-300 delay-100">

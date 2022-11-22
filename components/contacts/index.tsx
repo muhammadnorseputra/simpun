@@ -14,9 +14,9 @@ const initialValues: MyFormValues = {
 }
 
 const validationSchema = Yup.object({
-  fullName: Yup.string().required('Wajib Di Isi'),
-  email: Yup.string().email('Invalid email format').required('Wajib Di Isi'),
-  message: Yup.string().required('Wajib Di Isi')
+  fullName: Yup.string().required('Field is required'),
+  email: Yup.string().email('Invalid email format').required('Field is required'),
+  message: Yup.string().required('Field is required')
 })
 
 function Contacts() {
