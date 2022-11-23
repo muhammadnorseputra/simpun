@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <Head>
-        <title>Hi, Welcome</title>
+        <title>Halo, Welcome</title>
       </Head>
       <NextNProgress color="#56A3A6" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} nonce="my-nonce"/>
       <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class">

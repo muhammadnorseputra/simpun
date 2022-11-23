@@ -4,8 +4,9 @@ import type { NextRequest } from 'next/server'
 
 export default function middleware(request: NextRequest) {
   const isSpalshScreen = request.cookies.has('splashscreen')
-  if(JSON.stringify(isSpalshScreen) === 'false' || isSpalshScreen === undefined) {
-    return NextResponse.rewrite(new URL('/', request.url))
+  const { pathname, origin } = request.nextUrl
+  if(isSpalshScreen === false || isSpalshScreen === undefined) {
+    return NextResponse.rewrite(`${origin}/`)
   }
   return NextResponse.next()
 }

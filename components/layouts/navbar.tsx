@@ -8,7 +8,7 @@ import {
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 border-gray-200 dark:border-slate-700/60 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg z-20">
+        <nav className="border-b-4 border-gray-200 dark:border-slate-700/60 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg animate-reduce z-20">
           <ul className="flex justify-center items-center align-middle md:ml-3">
             <li className="text-center">
               <Link href="/me" passHref>

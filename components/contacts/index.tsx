@@ -1,3 +1,4 @@
+import { HomeIcon, InboxIcon, PhoneIcon } from '@heroicons/react/outline'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
@@ -14,7 +15,7 @@ const initialValues: MyFormValues = {
 }
 
 const validationSchema = Yup.object({
-  fullName: Yup.string().required('Field is required'),
+  fullName: Yup.string().min(3).required('Field is required'),
   email: Yup.string().email('Invalid email format').required('Field is required'),
   message: Yup.string().required('Field is required')
 })
@@ -36,10 +37,29 @@ function Contacts() {
         Contact Me
       </h2>
       <div className="text-sm text-gray-400 mt-4 border-b border-slate-600 pb-4">
-          <p className="font-bold text-white">Address</p>
-          Desa. Banua Hanyar, RT. 02 No. 74 Kec. Batumandi Kab. Balangan.
-          <p className="font-bold text-white mt-2">Email</p>
-          muhammadnorseputra@gmail.com
+          <div className="flex items-center justify-start gap-5">
+            <HomeIcon className='w-6 h-6 text-white' />
+            <div>
+              <p className="font-bold text-white">Address</p>
+              Desa. Banua Hanyar, RT. 02 No. 74 Kec. Batumandi Kab. Balangan.
+            </div>
+          </div>
+          <div className="flex items-center justify-start gap-5">
+            <InboxIcon className='w-6 h-6 text-white' />
+            <div>
+              <p className="font-bold text-white mt-2">Email</p>
+              muhammadnorseputra@gmail.com
+              <a href='mailto:muhammadnorseputra@gmail.com?subject=Send by%20portofolio&body=Halo%20Putra' target='_blank' className='py-0.5 px-2 ml-2 bg-green-400 text-black rounded-full text-sm hover:bg-green-500 hover:text-white'>Send Message</a>
+            </div>
+          </div>
+          <div className="flex items-center justify-start gap-5">
+            <PhoneIcon className='w-6 h-6 text-white' />
+            <div>
+              <p className="font-bold text-white mt-2">WhatsApp</p>
+              +62 82151815132
+              <a href="https://wa.me/6282151815132?text=Halo%20Putra" target='_blank' className='py-0.5 px-2 ml-2 bg-green-400 text-black rounded-full text-sm hover:bg-green-500 hover:text-white'>Chat</a>
+            </div>
+          </div>
       </div>
       <div className="text-sm font-bold text-white mt-2">Fill this form for contact me</div>
       <form onSubmit={formik.handleSubmit} noValidate className="mt-2">
