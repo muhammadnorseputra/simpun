@@ -37,7 +37,7 @@ export default function Project({ projects }: any) {
           <div key={project.id}>
             <div className="md:px-2 rounded-xl">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_API}/${project.screenshoot[0].source}`}
+              src={`https://raw.githubusercontent.com/muhammadnorseputra/simpun-api/master/${project.screenshoot[0].source}`}
               alt={project.title}
               width={800}
               height={390}

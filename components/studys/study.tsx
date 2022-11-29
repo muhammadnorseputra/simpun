@@ -9,7 +9,6 @@ function Study({ studys }: any) {
           <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">Study</h2>
           <div className="flex flex-nowrap space-x-10 mt-4 overflow-y-hidden overflow-x-auto scrolling-touch pb-4">
             {studys.map((study:any) => (
-            // const { id, tingkat, jurusan, location, year_start, year_end } = study;
             <div key={study.id} className="min-w-[300px] bg-green-200 rounded-2xl relative group shadow-md shadow-green-300 dark:shadow-black/30">
               <div className="px-4 pb-6 pt-3 overflow-hidden relative">
                 <h3 className="font-bold text-slate-800 text-xl">{study.tingkat} { study.jurusan ? '-':''} {study.jurusan}</h3>
