@@ -49,7 +49,7 @@ function Contacts() {
             <div>
               <p className="font-bold text-white mt-2">Email</p>
               muhammadnorseputra@gmail.com
-              <a href='mailto:muhammadnorseputra@gmail.com?subject=Send by%20portofolio&body=Halo%20Putra' target='_blank' className='py-0.5 px-2 ml-2 bg-green-400 text-black rounded-full text-sm hover:bg-green-500 hover:text-white'>Send Message</a>
+              <a href='mailto:muhammadnorseputra@gmail.com?subject=Send by%20portofolio&body=Halo%20Putra' target='_blank' className='py-0.5 px-2 ml-2 bg-green-400 text-black rounded-full text-sm hover:bg-green-500 hover:text-white'>Send</a>
             </div>
           </div>
           <div className="flex items-center justify-start gap-5">
