@@ -31,7 +31,7 @@ const Me: NextPage = ({ resource }: any) => {
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/muhammadnorseputra/simpun-api/db`)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/db.json`)
   const resource = await response.json()
   // Pass resource to the page via props
   return { props: { resource } }
