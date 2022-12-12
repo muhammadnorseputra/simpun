@@ -1,6 +1,7 @@
 import { HomeIcon, InboxIcon, PhoneIcon } from '@heroicons/react/outline'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import toast, { Toaster } from 'react-hot-toast';
 
 interface MyFormValues  {
   fullName: string,
@@ -25,8 +26,23 @@ function Contacts() {
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: values => {
-      console.log(values)
+    onSubmit: (values, { resetForm }) => {
+      // console.log(values)
+      fetch('https://sheet.best/api/sheets/36853fc8-b6cd-4484-b1fb-c47626b5ff4e', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(result => {
+        resetForm()
+        toast.success('Successfully, your message save!', {
+          position: 'bottom-center',
+          duration: 3000,
+        });
+      });
     }
   })
 
@@ -111,16 +127,29 @@ function Contacts() {
             onBlur={formik.handleBlur} 
             name="message" 
             rows={4} 
-            className={`resize-none block p-2.5 w-full text-md text-white bg-gray-700 border ${!formik.errors.message && formik.touched.message ? `border-green-700 dark:border-green-300` : 'border-gray-600'} focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder="Type Your message here..." defaultValue={formik.values.message} />
+            className={`resize-none block p-2.5 w-full text-md text-white bg-gray-700 border ${!formik.errors.message && formik.touched.message ? `border-green-700 dark:border-green-300` : 'border-gray-600'} focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder="Type Your message here..." value={formik.values.message} />
             {formik.errors.message && formik.touched.message ? (<span className='text-red-400 text-sm'>{formik.errors.message}</span>) : null}
         </div>
-        <button type="submit" disabled={!formik.isValid || !formik.dirty} data-aos="fade-up" data-aos-delay="250" role="submit" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded disabled:bg-blue-300 disabled:border-blue-300 disabled:text-white/50 disabled:cursor-not-allowed">
-            Send
+        <button type="submit" disabled={!formik.isValid || !formik.dirty || formik.isSubmitting} data-aos="fade-up" data-aos-delay="250" role="submit" className="inline-flex items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded disabled:bg-blue-300 disabled:border-blue-300 disabled:text-white/50 disabled:cursor-not-allowed">
+            { formik.isSubmitting ? <LoadingSpinner/> : 'Send' } 
         </button>
       </form>
     </div>
+    <Toaster />
     </section>
   );
+}
+
+function LoadingSpinner() {
+  return (
+  <>
+    <svg className="h-4 w-4 animate-spin" viewBox="3 3 18 18">
+      <path className="fill-blue-800" d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" />
+      <path className="fill-blue-100" d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z" />
+    </svg>
+    <span>Loading...</span>
+  </>
+  )
 }
 
 export default Contacts;
