@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <>
     <header>
-      <div className="flex items-center justify-between p-4 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-900/80">
+      <div className="flex items-center justify-between p-4 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-900/70">
         {/* Logo */}
         <Link href="/me">
         <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-gray-800 dark:text-white text-2xl font-bold hover:cursor-pointer">
