@@ -16,3 +16,8 @@ export const toBase64 = (str: string) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
+
+export const tglIndo = (str: string) => {
+  let d  = new Date(str)
+  return d.toLocaleDateString("id")
+}
