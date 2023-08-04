@@ -22,7 +22,7 @@ function Hobby({hobbys}: any) {
 
   return (
     <section className="overflow-hidden">
-      <div className="relative px-6 py-8 bg-gradient-to-t from-blue-700 to-blue-500" data-aos="fade-up">
+      <div className="relative px-6 py-8 bg-gradient-to-t from-green-700 to-green-500" data-aos="fade-up">
         <h2 className="inline text-2xl font-bold text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-white before:animate-pulse">
           Hobby
         </h2>
