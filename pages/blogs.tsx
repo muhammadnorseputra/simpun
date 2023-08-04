@@ -13,6 +13,7 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
   const { items: data, nextPageToken } = postlist
   const [posts, setPosts]: any = useState(data);
   const [PageToken, setPageToken]: any = useState(nextPageToken);
+  const [loading, setLoading] = useState(false);
   
   async function getNewPostsFromApi() {
     const fetch_post = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=nextPageToken,items(id,title,labels,url,published,images(url),replies(totalItems),author(displayName,url,image(url)))&pageToken=${PageToken}&fetchBodies=true&fetchImages=true&maxResults=8&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
@@ -34,7 +35,7 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
           <div className="inline px-3 py-1 bg-green-800/90 text-sm text-white rounded-l-xl">{labels}</div> <span className="text-white font-bold">{tglIndo(date)}</span>
           <h2 className="text-white dark:text-white font-bold text-2xl my-2 transition-all hover:text-green-500 line-clamp-2">{title}</h2>
           <div className="flex justify-start space-x-2 mt-4">
-            <Image src={`${author.image.url}`} width={30} height={30} className="rounded-full" />
+            <Image src={`https:${author.image.url}`} width={30} height={30} className="rounded-full" />
             <div className="text-white">{author.displayName}</div>
           </div>
         </div>
@@ -76,7 +77,7 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
 export async function getServerSideProps() {
   // Fetch data from external API
   const response = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=items(title,labels,url,published,images(url),replies(totalItems),author(displayName,url,image(url)))&fetchBodies=true&fetchImages=true&maxResults=1&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
-  const postList = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=nextPageToken,items(id,title,labels,url,published,images(url),replies(totalItems),author(displayName,url,image(url)))&fetchBodies=true&fetchImages=true&maxResults=8&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
+  const postList = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=nextPageToken,items(id,title,labels,url,published,images(url),replies(totalItems),author(displayName,url))&fetchBodies=true&fetchImages=true&maxResults=8&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
   const featured = await response.json()
   const postlist = await postList.json()
   // Pass featured to the page via props
