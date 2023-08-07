@@ -8,6 +8,7 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
+    "@sindresorhus/slugify": "^2.2.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "aos": "^3.0.0-beta.6",
     "cookies-next": "^2.1.1",
