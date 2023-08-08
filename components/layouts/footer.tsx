@@ -4,7 +4,7 @@ import {
 export default function Footer() {
     return (
         <footer>
-          <div className="relative px-6 py-6 bg-gradient-to-b from-slate-700 to-slate-900 flex justify-between items-center border-t border-slate-800">
+          <div className="relative px-6 py-6 bg-gradient-to-r from-slate-800 to-slate-900 flex justify-between items-center border-t border-slate-800">
             <p className="text-white font-medium">
               Made with <HeartIcon className="w-4 h-4 fill-red-500 stroke-red-600 animate-pulse inline"/> @mnorsaputra
             </p>

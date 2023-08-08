@@ -8,8 +8,8 @@ import Footer from '@/components/layouts/footer'
 
 export default function Layouts({ children }: any) {
     return (
-    <div className="container mx-auto max-w-full md:max-w-xl md:shadow-2xl">
-      <div className="bg-white dark:bg-gray-900 min-h-screen shadow-xl">
+    <div className="container mx-auto max-w-full md:max-w-xl md:shadow-xl">
+      <div className="bg-white dark:bg-gray-900 min-h-screen shadow">
           <Header/>
           <Navbar />
           {children}

@@ -12,6 +12,17 @@ export const shimmer = (w: number, h: number) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`
 
+// let's make a function that receive the specific element_id as string and scroll into that element_id
+export const scrolltoHash = function (element_id: string) {
+  const element = document.getElementById(element_id)
+  element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+}
+
+export const openInNewTab = (url: string) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+
 export const toBase64 = (str: string) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')

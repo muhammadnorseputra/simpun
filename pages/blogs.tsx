@@ -84,8 +84,12 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
 };
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }: any) {
   // Fetch data from external API
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   const response = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=items(id,title,labels,url,published,images(url),replies(totalItems),author(displayName,url,image(url)))&fetchBodies=true&fetchImages=true&maxResults=1&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
   const postList = await fetch(`${process.env.NEXT_PUBLIC_BLOG_URL}/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts?fields=nextPageToken,items(id,title,labels,url,published,images(url),replies(totalItems),author(displayName,url))&fetchBodies=true&fetchImages=true&maxResults=8&status=live&key=${process.env.NEXT_PUBLIC_BLOG_KEY}`)
   const featured = await response.json()
