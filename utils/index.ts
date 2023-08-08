@@ -19,5 +19,34 @@ export const toBase64 = (str: string) =>
 
 export const tglIndo = (str: string) => {
   let d  = new Date(str)
-  return d.toLocaleDateString("id")
+  let tgl = d.toLocaleDateString("id")
+  let pecah = tgl.split("/")
+  var tglH: string  = pecah[0]; var tglB: string = pecah[1]; var tglT = pecah[2];
+  switch(tglH) {
+    case "0": tglH = "Minggu"; break;
+    case "1": tglH = "Senin"; break;
+    case "2": tglH = "Selasa"; break;
+    case "3": tglH = "Rabu"; break;
+    case "4": tglH = "Kamis"; break;
+    case "5": tglH = "Jum'at"; break;
+    case "6": tglH = "Sabtu"; break;
+   }
+   
+   switch(tglB) {
+    case "0": tglB = "Januari"; break;
+    case "1": tglB = "Februari"; break;
+    case "2": tglB = "Maret"; break;
+    case "3": tglB = "April"; break;
+    case "4": tglB = "Mei"; break;
+    case "5": tglB = "Juni"; break;
+    case "6": tglB = "Juli"; break;
+    case "7": tglB = "Agustus"; break;
+    case "8": tglB = "September"; break;
+    case "9": tglB = "Oktober"; break;
+    case "10": tglB = "November"; break;
+    case "11": tglB = "Desember"; break;
+   }
+
+   let tampilTgl = `${tglB} ${pecah[0]}, ${tglT}`
+   return tampilTgl; 
 }

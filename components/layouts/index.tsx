@@ -9,7 +9,7 @@ import Footer from '@/components/layouts/footer'
 export default function Layouts({ children }: any) {
     return (
     <div className="container mx-auto max-w-full md:max-w-xl md:shadow-2xl">
-      <div className="bg-white dark:bg-slate-500 min-h-screen shadow-3xl">
+      <div className="bg-white dark:bg-gray-900 min-h-screen shadow-xl">
           <Header/>
           <Navbar />
           {children}

@@ -38,8 +38,8 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
         <Image src={images[0].url} layout="intrinsic" placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(Shimmer(110, 110))}`} className="transition-all group-hover:scale-110" width={600} height={340} alt={`${title}`}/>
         </div>
         <div className="absolute bottom-1 w-full px-8 pt-16 pb-6 bg-gradient-to-t dark:from-black/90 from-black/90">
-          <div className="inline px-3 py-1 bg-green-800/90 text-sm text-white rounded-l-xl">{labels}</div> <span className="text-white font-bold">{tglIndo(date)}</span>
-          <h2 className="text-white dark:text-white font-bold text-2xl my-2 transition-all hover:text-green-500 line-clamp-2"><Link href={`${FeaturedId}/${slugify(title)}`}>{title}</Link></h2>
+          <div className="inline px-3 py-1 bg-green-800/90 text-sm text-white rounded-l-xl">{labels}</div> <span className="text-white font-bold text-sm md:text-base">{tglIndo(date)}</span>
+          <h2 className="text-white dark:text-white font-bold text-xl md:text-2xl my-2 transition-all hover:text-green-500 line-clamp-2"><Link href={`${FeaturedId}/${slugify(title)}`}>{title}</Link></h2>
           <div className="flex justify-start space-x-2 mt-4">
             <Image src={`https:${author.image.url}`} width={30} height={30} className="rounded-full" />
             <div className="text-white">{author.displayName}</div>
@@ -52,10 +52,10 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
         <div className="flex flex-col justify-start items-start space-y-2 w-9/12 pr-5">
           <div className="flex justify-start items-center space-x-2">
             <div className="px-3 py-1 bg-slate-800/50 text-sm text-white rounded-l-xl">{post.labels[0]}</div> 
-            <span className="text-slate-500 dark:text-slate-700 text-sm">{tglIndo(post.published)}</span>
+            <span className="text-slate-500 dark:text-slate-500 text-sm">{tglIndo(post.published)}</span>
           </div>
           
-          <h2 className="font-bold text-md text-slate-600 dark:text-slate-800 dark:hover:text-green-500 hover:text-green-500 line-clamp-2">
+          <h2 className="font-bold text-md text-slate-600 dark:text-slate-200 dark:hover:text-green-500 hover:text-green-500 line-clamp-2">
             <Link href={`${post.id}/${slugify(post.title)}`}>{post.title}</Link>
           </h2>
           <div className="text-sm text-slate-500 flex justify-start items-center space-x-1"> <UserCircleIcon className="w-6 h-6 text-gray-500 dark:text-amber-500"/> <span className="dark:text-slate-700"> {author.displayName}</span></div>
