@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import {ArrowsExpandIcon} from "@heroicons/react/outline";
 import { useState } from "react";
-import Labels from "@/components/blogs/labels";
+import Labels from "@/components/blogs/Labels";
 import FeaturedPost from "@/components/blogs/FeaturedPost";
 import PostList from "@/components/blogs/PostList";
 
