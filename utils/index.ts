@@ -12,6 +12,10 @@ export const shimmer = (w: number, h: number) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`
 
+export const getCurrentUrl = (url: string) => {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
+  return currentUrl;
+}
 // let's make a function that receive the specific element_id as string and scroll into that element_id
 export const scrolltoHash = function (element_id: string) {
   const element = document.getElementById(element_id)
@@ -60,4 +64,29 @@ export const tglIndo = (str: string) => {
 
    let tampilTgl = `${tglB} ${pecah[0]}, ${tglT}`
    return tampilTgl; 
+}
+
+export const intelligentlyTruncate = ( text: any, threshhold: number ) =>
+{    
+    for(var i = threshhold; i < text.length; i++ )
+    {
+        if( /^\s/.test(text.substr( i, 1 ) ) )
+            return text.substr( 0, i ); // + '...' if you want the elipsis.
+    }
+    return text;
+}
+
+export const fetchImageId = async (postId: string) => {
+    const url = `https://www.googleapis.com/blogger/v3/blogs/7792147091805313605/posts/${postId}?key=${process.env.NEXT_PUBLIC_BLOG_KEY}&fetchImages=true&fetchBody=false&fields=images(url)`
+    const req = await fetch(url)
+    const json = await req.json()
+    const {images} = json
+    return images[0].url
+}
+
+export const fetchComments = async (postId: string) => {
+    const url = `https://www.googleapis.com/blogger/v3/blogs/${process.env.NEXT_PUBLIC_BLOG_ID}/posts/${postId}/comments?key=${process.env.NEXT_PUBLIC_BLOG_KEY}`
+    const req = await fetch(url)
+    const json = await req.json()
+    return json
 }

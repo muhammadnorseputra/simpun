@@ -48,7 +48,7 @@ function Contacts() {
 
   return (
     <section className="overflow-hidden">
-    <div className="relative px-6 py-8 overflow-hidden bg-slate-700 z-10" data-aos="fade-down">
+    <div className="relative px-6 py-8 overflow-hidden bg-slate-800 z-10" data-aos="fade-down">
       <h2 className="inline text-2xl font-bold text-slate-400 relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-400 before:animate-pulse">
         Contact Me
       </h2>
@@ -84,7 +84,7 @@ function Contacts() {
             type="text"
             name="fullName"
             id="floating_first_name"
-            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 ${!formik.errors.fullName && formik.touched.fullName ? `border-green-700 dark:border-green-300` : 'border-gray-600'} appearance-none dark:text-whit dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 ${!formik.errors.fullName && formik.touched.fullName ? `border-green-700 dark:border-green-300` : 'border-gray-600'} appearance-none dark:text-whit dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer`}
             placeholder=" "
             required
             onChange={formik.handleChange} 
@@ -93,7 +93,7 @@ function Contacts() {
           />
           <label
             htmlFor="floating_first_name"
-            className="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Your Full Name <span className="text-red-400">*</span>
           </label>
@@ -108,13 +108,13 @@ function Contacts() {
             onBlur={formik.handleBlur}
             value={formik.values.email}
             id="floating_email"
-            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 ${!formik.errors.email && formik.touched.email ? `border-green-700 dark:border-green-300` : 'border-gray-600'} appearance-none dark:text-whit dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer`}
+            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 ${!formik.errors.email && formik.touched.email ? `border-green-700 dark:border-green-300` : 'border-gray-600'} appearance-none dark:text-whit dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer`}
             placeholder=" "
             required
           />
           <label
             htmlFor="floating_email"
-            className="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Your Email address <span className="text-red-400">*</span>
           </label>
@@ -127,10 +127,10 @@ function Contacts() {
             onBlur={formik.handleBlur} 
             name="message" 
             rows={4} 
-            className={`resize-none block p-2.5 w-full text-md text-white bg-gray-700 border ${!formik.errors.message && formik.touched.message ? `border-green-700 dark:border-green-300` : 'border-gray-600'} focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder="Type Your message here..." value={formik.values.message} />
+            className={`resize-none block p-2.5 w-full text-md text-white bg-gray-700 border ${!formik.errors.message && formik.touched.message ? `border-green-700 dark:border-green-300` : 'border-gray-600'} focus:ring-green-500 focus:border-green-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500`} placeholder="Type Your message here..." value={formik.values.message} />
             {formik.errors.message && formik.touched.message ? (<span className='text-red-400 text-sm'>{formik.errors.message}</span>) : null}
         </div>
-        <button type="submit" disabled={!formik.isValid || !formik.dirty || formik.isSubmitting} data-aos="fade-up" data-aos-delay="250" role="submit" className="inline-flex items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded disabled:bg-blue-300 disabled:border-blue-300 disabled:text-white/50 disabled:cursor-not-allowed">
+        <button type="submit" disabled={!formik.isValid || !formik.dirty || formik.isSubmitting} data-aos="fade-up" data-aos-delay="250" role="submit" className="inline-flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded disabled:bg-green-300 disabled:border-green-300 disabled:text-green/50 disabled:cursor-not-allowed">
             { formik.isSubmitting ? <LoadingSpinner/> : 'Send' } 
         </button>
       </form>
@@ -144,8 +144,8 @@ function LoadingSpinner() {
   return (
   <>
     <svg className="h-4 w-4 animate-spin" viewBox="3 3 18 18">
-      <path className="fill-blue-800" d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" />
-      <path className="fill-blue-100" d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z" />
+      <path className="fill-green-800" d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" />
+      <path className="fill-green-100" d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z" />
     </svg>
     <span>Loading...</span>
   </>
