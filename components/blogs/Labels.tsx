@@ -1,10 +1,15 @@
 import Link from "next/link";
 
-export default function Labels() {
+export default function Labels({isActive}: any) {
     return (
         <div className="py-3 px-4 border-b border-gray-100 dark:border-slate-800 flex items-center justify-start mx-full hover:overflow-x-auto overflow-hidden space-x-4">
-            <Link href="/"><button type="button" role='button' className="py-2 px-3 rounded-full bg-black dark:bg-green-800 text-white hover:bg-gray-800 whitespace-nowrap" data-aos="fade-left">Untuk Anda</button></Link>
-            <Link href="/search/label/Blogger"><button type="button" role='button' className="py-2 px-3 rounded-full bg-gray-100  dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-slate-400" data-aos="fade-left">Blogger</button></Link>
+            <Link href="/blogs"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Blogs' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Untuk Anda</button></Link>
+            <Link href="/tag/Blogger"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Blogger' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Blogger</button></Link>
+            <Link href="/tag/Keyboard"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Keyboard' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Keyboard</button></Link>
+            <Link href="/tag/Adsense"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Adsense' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Adsense</button></Link>
+            <Link href="/tag/Balangan"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Balangan' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Balangan</button></Link>
+            <Link href="/tag/Html"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Html' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Html</button></Link>
+            <Link href="/tag/Javascript"><button type="button" role='button' className={`whitespace-nowrap py-2 px-3 rounded-full bg-gray-100 ${isActive === 'Javascript' ? 'bg-black text-white hover:bg-gray-800 dark:bg-green-800 dark:hover:bg-green-700' : 'hover:bg-gray-200 dark:text-slate-400 dark:bg-gray-700 dark:hover:bg-gray-800'}`} data-aos="fade-left">Javascript</button></Link>
         </div>
     )
 }

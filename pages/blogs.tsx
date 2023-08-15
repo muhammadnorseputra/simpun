@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import {ArrowsExpandIcon} from "@heroicons/react/outline";
 import { useState } from "react";
-import Labels from "@/components/blogs/labels";
+import Labels from "@/components/blogs/Labels";
 import FeaturedPost from "@/components/blogs/FeaturedPost";
 import PostList from "@/components/blogs/PostList";
 
@@ -30,7 +30,7 @@ const Blogs: NextPage = ({ featured: {items}, postlist }: any) => {
       <title>@mnorsaputra - Blogs</title>
     </Head>
     <FeaturedPost item={items[0]}/>
-    <Labels/>
+    <Labels isActive="Blogs"/>
     <PostList posts={posts}/>
     <div className="flex justify-center items-center mb-5">
     <button onClick={async () => {
