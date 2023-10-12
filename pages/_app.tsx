@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
       easing: 'ease-out-cubic',
-      once: false,
+      once: true,
       offset: 100,
       delay: 100,
     });
@@ -33,8 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     loop: true,
     forceSoundEnabled: true,
     soundEnabled: true,
-    interrupt: true,
-    volume: 0.25
+    interrupt: false,
+    volume: 0.15
   })
     
   return (
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Halo, Welcome</title>
       </Head>
-      <NextNProgress color="#56A3A6" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} nonce="my-nonce"/>
+      <NextNProgress color="#fff" startPosition={0.3} stopDelayMs={300} height={2} showOnShallow={true} nonce="my-nonce"/>
       <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>

@@ -8,39 +8,39 @@ import {
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 dark:border-amber-500 sm:border-gray-200 dark:sm:border-green-700/90 sticky top-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
+        <nav className="border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-green-700/90 sticky top-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
           <ul className="flex justify-center items-center align-middle md:ml-3">
             <li className="text-center">
               <Link href="/me" passHref>
-                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   <HomeIcon className="w-6 h-6 text-gray-600 dark:text-amber-500"/>
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#cariers" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   Cariers
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#skills" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   Skills
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#projects" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   Projects
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Menu as="div" className="relative inline-block">
-                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-t-2xl p-4 relative navigation-effect">
+                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   <DotsCircleHorizontalIcon className="w-6 h-6 text-gray-400" />{" "}
                   More{" "}
                 </Menu.Button>
@@ -62,7 +62,7 @@ export default function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-600"
                                 : "text-gray-900"
-                            } group relative flex w-full items-center p-4 navigation-effect`}
+                            } group relative flex w-full items-center p-4`}
                           >
                             Certificates
                           </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
                               active
                                 ? "bg-gray-100 text-gray-600"
                                 : "text-gray-900"
-                            } group relative flex w-full items-center p-4 navigation-effect`}
+                            } group relative flex w-full items-center p-4`}
                           >
                             Blog
                           </button>

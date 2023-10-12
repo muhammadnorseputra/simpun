@@ -30,7 +30,7 @@ const SplashScreen: NextPage = () => {
     </svg>
     <span className="cloud cloud--medium" />
     <span className="cloud cloud--large" />
-    <h3 className="text-black dark:text-white"><strong> @putra</strong> sedang dalam perjalanan ...</h3>
+    <h3 className="text-black"><strong> @putra</strong> sedang dalam perjalanan ...</h3>
   </div>
   );
 };
