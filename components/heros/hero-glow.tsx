@@ -2,8 +2,8 @@ import Image from 'next/image'
 import { GithubIcon, FigmaIcon, TwitterIcon, IgIcon, FbIcon, DownloadIcon } from '../icons'
 import MyPic from '../../public/mypic.png'
 
-function HeroGlow( { me }: any ) {
-  const { intro, tagline, description } = me[0]
+function HeroGlow( { my }: any ) {
+  const { intro, tagline, description } = my
 	return (
 		<section>
         <div className="px-4 py-12 relative bg-white/60 dark:bg-black/70 animate-reduce overflow-hidden z-0">
