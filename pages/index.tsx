@@ -10,7 +10,7 @@ const SplashScreen: NextPage = () => {
       setTimeout(() => {
         Router.push("/me");
         setCookie('splashscreen', true, { maxAge: 3600, path: '/' });
-      }, 3000);
+      }, 1000);
     }
   });
   return (
@@ -30,7 +30,7 @@ const SplashScreen: NextPage = () => {
     </svg>
     <span className="cloud cloud--medium" />
     <span className="cloud cloud--large" />
-    <h3 className="text-black"><strong> @putra</strong> sedang dalam perjalanan ...</h3>
+    <h3 className="text-black"><strong>👋🏻</strong> mohon tunggu loading ...</h3>
   </div>
   );
 };

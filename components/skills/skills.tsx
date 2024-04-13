@@ -3,6 +3,15 @@ import {
   } from "@heroicons/react/outline";
 import { Skill } from "../icons/brand";
 
+export function SkillItem({icon, title}: any) {
+  return (
+    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
+      {icon}
+      <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">{title}</div>
+    </div>
+  )
+}
+
 export default function Skills() {
     return (
         <section id="skills"  className='overflow-x-hidden'>
@@ -11,83 +20,26 @@ export default function Skills() {
             <h2 className="inline text-2xl font-bold text-gray-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-gray-800 before:animate-pulse">
               Skill
             </h2>
-            <div className="flex flex-wrap justify-evenly sm:justify-between items-center gap-y-3 gap-x-3 mt-8">
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="boostrap" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="codeigniter" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="cpanel" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">85%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="css3" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">85%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="figma" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">40%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="firebase" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">40%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="html" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">99%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="javascript" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">80%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="jquery" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="laravel" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">50%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="mysql" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="photoshop" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="php" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">95%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="sass" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">60%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="vscode" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">100%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="xampp" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">99%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="nextjs" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="reactjs" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">90%</div>
-              </span>
-              <span className="w-28 h-28 rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
-                <Skill type="tailwindcss" />
-                <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">99%</div>
-              </span>
+            <div className="flex flex-nowrap sm:flex-wrap sm:justify-between sm:items-center  justify-evenly overflow-y-hidden overflow-x-auto scrolling-touch gap-y-3 gap-x-3 mt-8">
+              <SkillItem icon={<Skill type="boostrap" />} title="bootsrap"/>
+              <SkillItem icon={<Skill type="codeigniter" />} title="codeigniter"/>
+              <SkillItem icon={<Skill type="cpanel" />} title="cpanel"/>
+              <SkillItem icon={<Skill type="css3" />} title="css3"/>
+              <SkillItem icon={<Skill type="figma" />} title="figma"/>
+              <SkillItem icon={<Skill type="firebase" />} title="firebase"/>
+              <SkillItem icon={<Skill type="html" />} title="html5"/>
+              <SkillItem icon={<Skill type="javascript" />} title="javascript"/>
+              <SkillItem icon={<Skill type="jquery" />} title="jquery"/>
+              <SkillItem icon={<Skill type="laravel" />} title="laravel"/>
+              <SkillItem icon={<Skill type="mysql" />} title="mysql"/>
+              <SkillItem icon={<Skill type="photoshop" />} title="photoshop"/>
+              <SkillItem icon={<Skill type="php" />} title="php"/>
+              <SkillItem icon={<Skill type="sass" />} title="sass"/>
+              <SkillItem icon={<Skill type="vscode" />} title="vscode"/>
+              <SkillItem icon={<Skill type="xampp" />} title="xampp"/>
+              <SkillItem icon={<Skill type="nextjs" />} title="nextjs"/>
+              <SkillItem icon={<Skill type="reactjs" />} title="reactjs"/>
+              <SkillItem icon={<Skill type="tailwindcss" />} title="tailwindcss"/>
             </div>
           </div>
         </section>
