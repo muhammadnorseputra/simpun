@@ -24,7 +24,7 @@ export default function Document() {
         <meta name="theme-color" content="#16a34a"/>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"/> 
       </Head>
-      <body className="bg-gray-200 dark:bg-gray-700 transition-colors duration-300 delay-100">
+      <body className="bg-[url('https://img.freepik.com/premium-photo/abstract-clean-modern-background-illustration_181020-3112.jpg')] bg-fixed bg-no-repeat bg-cover bg-left-top dark:bg-[url('https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149138436.jpg')] transition-colors duration-300 delay-100">
         <Main />
         <NextScript />
       </body>
