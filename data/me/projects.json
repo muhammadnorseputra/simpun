@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"title": "Aplikasi WEB (Indeks Kepuasan Masyarakat) BKPSDM Kab. Balangan",
+		"category": "WEB",
+		"date_created": "2021-05-03",
+		"url": "https://bkpsdm-skm.balangankab.go.id",
+		"technology": "HTML, CSS, Javascript, PHP Codeigniter 3",
+		"screenshoot": [
+			{
+				"id": 1,
+				"title": "Halaman Depan",
+				"source": "/src/screenshoot/ikm/01.png"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Aplikasi WEB (Kanal Official) BKPSDM Kab. Balangan",
+		"category": "WEB",
+		"date_created": "2019-01-04",
+		"url": "https://bkpsdm.balangankab.go.id",
+		"technology": "HTML, CSS, GULP, SASS, Javascript, PHP Codeigniter 3",
+		"screenshoot": [
+			{
+				"id": 1,
+				"title": "Halaman Depan",
+				"source": "/src/screenshoot/web/01.png"
+			}
+		]
+	}
+]

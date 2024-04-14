@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"title": "Membaca Buku",
+		"description": "Mengisi waktu luang dengan membaca buku",
+		"image": "https://cdn-icons-png.flaticon.com/512/4298/4298316.png"
+	},
+	{
+		"id": 2,
+		"title": "Photograpy",
+		"description": "Mengabadikan setiap moment dalam bentuk digital",
+		"image": "https://cdn-icons-png.flaticon.com/512/1042/1042339.png"
+	},
+	{
+		"id": 3,
+		"title": "Learning",
+		"description": "Suka belajar hal baru sebagai tantangan",
+		"image": "https://cdn-icons-png.flaticon.com/512/3749/3749784.png"
+	}
+]

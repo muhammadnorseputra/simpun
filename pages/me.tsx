@@ -9,9 +9,13 @@ import Hobbys from "@/components/hobbys/hobby";
 import Projects from "@/components/projects/project"
 import Contacts from "@/components/contacts";
 
+import project from '@/data/me/projects.json'
+import study from '@/data/me/studys.json'
+import hobby from '@/data/me/hobbys.json'
+import carrier from '@/data/me/carriers.json'
+import my from '@/data/me/me.json'
 
-const Me: NextPage = ({ resource }: any) => {
-  const { project, study, hobby, carrier, my } = resource;
+const Me: NextPage = () => {
   return (
     <Layouts>
       <Head>
@@ -28,28 +32,5 @@ const Me: NextPage = ({ resource }: any) => {
   );
 };
 
-// This gets called on every request
-export async function getServerSideProps() {
-  const [projects, studys, hobbys, carriers, me] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_BASE_API}/projects`), 
-    fetch(`${process.env.NEXT_PUBLIC_BASE_API}/studys`),
-    fetch(`${process.env.NEXT_PUBLIC_BASE_API}/hobbys`),
-    fetch(`${process.env.NEXT_PUBLIC_BASE_API}/carriers`),
-    fetch(`${process.env.NEXT_PUBLIC_BASE_API}/me`)
-  ]);
-
-  const [project, study, hobby, carrier, my] = await Promise.all([
-    projects.json(), 
-    studys.json(),
-    hobbys.json(),
-    carriers.json(),
-    me.json()
-  ]);
-
-  const resource = {project, study, hobby, carrier, my}
-
-  // Pass resource to the page via props
-  return { props: { resource } }
-}
 
 export default Me;

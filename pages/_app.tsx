@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Halo, Welcome</title>
       </Head>
-      <NextNProgress color="#fff" startPosition={0.2} stopDelayMs={300} height={4} showOnShallow={false} nonce="my-nonce"/>
+      <NextNProgress color="#fff" startPosition={0} stopDelayMs={0} height={4} showOnShallow={true} nonce="my-nonce"/>
       <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
