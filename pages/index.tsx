@@ -10,7 +10,7 @@ const SplashScreen: NextPage = () => {
       setTimeout(() => {
         Router.push("/me");
         setCookie('splashscreen', true, { maxAge: 3600, path: '/' });
-      }, 300);
+      }, 100);
     }
   });
   return (

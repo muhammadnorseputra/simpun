@@ -11,8 +11,8 @@ export default function Layouts({ children }: any) {
     <div className="container mx-auto max-w-full md:max-w-xl md:shadow-xl">
       <div className="bg-white dark:bg-gray-900 min-h-screen shadow">
           <Header/>
-          <Navbar />
           {children}
+          <Navbar />
           <Footer />
       </div>
     </div>

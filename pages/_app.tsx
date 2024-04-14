@@ -4,7 +4,6 @@ import { ThemeProvider, useTheme } from "next-themes";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import NextNProgress from 'nextjs-progressbar';
-import useSound from 'use-sound'
 
 import {
   RecoilRoot,
@@ -25,15 +24,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
 
-  // MUSIK
-  const [play, { sound }] = useSound('./musik/One-Direction-Right-Now-Audio.mp3', {
-    autoplay: true,
-    loop: true,
-    forceSoundEnabled: true,
-    soundEnabled: true,
-    interrupt: false,
-    volume: 0.15
-  })
   
   const colorLoading = theme === 'dark' ? '#fff' : '#000';
   return (

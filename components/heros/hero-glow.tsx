@@ -26,19 +26,19 @@ function HeroGlow( { my }: any ) {
               </div>
               <ul className="flex justify-between items-center gap-x-1 sm:gap-x-2 ml-2">
                 <li className="group"  data-aos="fade-left" data-aos-delay="200">
-                  <a href="https://github.com/muhammadnorseputra" target="_blank"><GithubIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-slate-400 group-hover:shadow-lg group-hover:shadow-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="https://github.com/muhammadnorseputra" target="_blank"><GithubIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-slate-400 group-hover:shadow-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full"/></a>
                 </li>
                 <li className="group"  data-aos="fade-left" data-aos-delay="300">
-                  <a href="#"><FigmaIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-600 group-hover:shadow-lg group-hover:shadow-violet-400 group-hover:fill-violet-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><FigmaIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-600 group-hover:shadow-violet-400 group-hover:fill-violet-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full"/></a>
                 </li>
                 <li className="group"  data-aos="fade-left" data-aos-delay="400">
-                  <a href="#"><TwitterIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-600 group-hover:shadow-lg group-hover:shadow-blue-400 group-hover:fill-blue-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><TwitterIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-600 group-hover:shadow-blue-400 group-hover:fill-blue-400 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full"/></a>
                 </li>
                 <li className="group"  data-aos="fade-left" data-aos-delay="500">
-                  <a href="#"><IgIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-800 group-hover:shadow-lg group-hover:shadow-violet-800 group-hover:fill-red-200 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><IgIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-violet-800 group-hover:shadow-violet-800 group-hover:fill-red-200 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full"/></a>
                 </li>
                 <li className="group"  data-aos="fade-left" data-aos-delay="600">
-                  <a href="#"><FbIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-900 group-hover:shadow-lg group-hover:shadow-blue-800 group-hover:fill-blue-800 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full hover:shadow-lg"/></a>
+                  <a href="#"><FbIcon className="w-10 h-10 text-white transition-all ease-out group-hover:text-blue-900 group-hover:shadow-blue-800 group-hover:fill-blue-800 origin-bottom group-hover:scale-150 group-hover:animate-bounce bg-black/20 group-hover:bg-white backdrop-blur-sm p-2 rounded-full"/></a>
                 </li>
               </ul>
               </div>

@@ -8,7 +8,7 @@ import {
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-green-700/90 sticky top-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
+        <nav className="border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-green-700/90 sticky bottom-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
           <ul className="flex justify-center items-center align-middle md:ml-3">
             <li className="text-center">
               <Link href="/me" passHref>
@@ -40,11 +40,7 @@ export default function Navbar() {
             </li>
             <li className="w-full text-center">
               <Menu as="div" className="relative inline-block">
-                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
-                  <DotsCircleHorizontalIcon className="w-6 h-6 text-gray-400" />{" "}
-                  More{" "}
-                </Menu.Button>
-                <Transition
+              <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
                   enterFrom="transform opacity-0 scale-95"
@@ -53,7 +49,7 @@ export default function Navbar() {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-2 mt-2 pb-1 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
+                  <Menu.Items className="absolute right-0 bottom-0 z-10 origin-bottom-right mt-2 pb-1 w-56 divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
                     <Menu.Item>
                       {({ active }) => (
                         <Link href="/certificates" legacyBehavior={false}>
@@ -86,6 +82,11 @@ export default function Navbar() {
                     </Menu.Item>
                   </Menu.Items>
                 </Transition>
+                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                  <DotsCircleHorizontalIcon className="w-6 h-6 text-gray-400" />{" "}
+                  More{" "}
+                </Menu.Button>
+                
               </Menu>
             </li>
           </ul>

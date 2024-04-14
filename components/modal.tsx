@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil'
 import { openStateModal } from 'atoms'
 import Image from "next/image";
 import Maintenance from '../public/maintenance.png'
+
 function MyDialog() {
   const [isOpen, setIsOpen] = useRecoilState(openStateModal)
   
