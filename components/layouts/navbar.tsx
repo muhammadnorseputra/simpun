@@ -8,8 +8,8 @@ import {
 export default function Navbar() {
    
     return (
-        <nav className="border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-green-700/90 sticky bottom-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
-          <ul className="flex justify-center items-center align-middle md:ml-3">
+        <nav className="border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-gray-800 sticky bottom-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg animate-reduce z-20">
+          <ul className="flex justify-center items-center align-middle ml-3">
             <li className="text-center">
               <Link href="/me" passHref>
                 <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">

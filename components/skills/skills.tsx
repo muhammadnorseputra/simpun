@@ -5,7 +5,7 @@ import { Skill } from "../icons/brand";
 
 export function SkillItem({icon, title}: any) {
   return (
-    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center relative overflow-hidden">
+    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center snap-start relative overflow-hidden">
       {icon}
       <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">{title}</div>
     </div>
@@ -20,7 +20,7 @@ export default function Skills() {
             <h2 className="inline text-2xl font-bold text-gray-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-gray-800 before:animate-pulse">
               Skill
             </h2>
-            <div className="flex flex-nowrap sm:flex-wrap sm:justify-between sm:items-center  justify-evenly overflow-y-hidden overflow-x-auto scrolling-touch gap-y-3 gap-x-3 mt-8">
+            <div className="flex flex-nowrap sm:flex-wrap sm:justify-between sm:items-center  justify-evenly overflow-y-hidden overflow-x-auto scrolling-touch snap-start scroll-smooth gap-y-3 gap-x-3 mt-8">
               <SkillItem icon={<Skill type="boostrap" />} title="bootsrap"/>
               <SkillItem icon={<Skill type="codeigniter" />} title="codeigniter"/>
               <SkillItem icon={<Skill type="cpanel" />} title="cpanel"/>

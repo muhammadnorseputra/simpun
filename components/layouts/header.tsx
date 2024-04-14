@@ -48,9 +48,8 @@ export default function Header() {
         <Link href="/me">
         <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-white sm:text-gray-800 dark:text-white text-2xl font-bold hover:cursor-pointer">
           <div>
-            <span className="text-amber-400 sm:text-green-700 dark:text-green-300">@</span>mnors
-            <span className="text-amber-400 sm:text-green-700 dark:text-green-300">a</span>putr
-            <span className="text-amber-400 sm:text-green-700 dark:text-green-300">a</span>
+            #mnorsaputra
+            <div className="text-xs m-0  p-0">Fullstack Web Developer</div>
           </div>
         </div>
         </Link>
@@ -64,9 +63,9 @@ export default function Header() {
           >
             {isPlay 
             ? 
-            <MusicNoteIcon className="w-6 h-6 text-white group-hover:text-green-500 focus:text-blue-200 animate-pulse duration-1000 ease-linear" />
+            <MusicNoteIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 dark:text-white group-hover:text-green-500 focus:text-blue-200 animate-pulse duration-1000 ease-linear" />
             :
-            <VolumeOffIcon className="w-6 h-6 text-white group-hover:text-green-500 focus:text-blue-200" />
+            <VolumeOffIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 dark:text-white group-hover:text-green-500 focus:text-blue-200" />
             }
           </button>
           <button
@@ -75,7 +74,7 @@ export default function Header() {
             role="button"
             className="p-2 mx-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600 group"
           >
-            {theme === 'light' ? <MoonIcon className="w-6 h-6  group-hover:text-green-500 text-white sm:text-gray-500 fill-gray-100 sm:fill-slate-400"/> : <LightBulbIcon className="w-6 h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />}
+            {theme === 'light' ? <MoonIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-white sm:text-gray-500 fill-gray-100 sm:fill-slate-400"/> : <LightBulbIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />}
           </button>
           <button
             onClick={() => setIsOpen(true)}
@@ -83,7 +82,7 @@ export default function Header() {
             role="button"
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600 group"
           >
-            <CogIcon className="w-6 h-6 group-hover:text-green-500 text-white sm:text-gray-500 focus:text-amber-200" />
+            <CogIcon className="w-4 h-4 sm:w-6 sm:h-6 group-hover:text-green-500 text-white sm:text-gray-500 focus:text-amber-200" />
           </button>
         </div>
       </div>

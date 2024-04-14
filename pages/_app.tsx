@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ThemeProvider, useTheme } from "next-themes";
+import { ThemeProvider } from "next-themes";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import NextNProgress from 'nextjs-progressbar';
@@ -12,7 +12,6 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { theme } = useTheme();
 
   useEffect(() => {
     AOS.init({
@@ -24,14 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
 
-  
-  const colorLoading = theme === 'dark' ? '#fff' : '#000';
   return (
     <RecoilRoot>
       <Head>
         <title>Halo, Welcome</title>
       </Head>
-      <NextNProgress color={colorLoading} startPosition={0.2} stopDelayMs={300} height={4} showOnShallow={false} nonce="my-nonce"/>
+      <NextNProgress color="#fff" startPosition={0.2} stopDelayMs={300} height={4} showOnShallow={false} nonce="my-nonce"/>
       <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
