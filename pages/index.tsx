@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
 import Router from "next/router";
-import { setCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 
 const SplashScreen: NextPage = () => {
   useEffect(() => {
     const { pathname } = Router;
-    if (pathname == "/") {
+    if (pathname == "/" && getCookie('splashscreen') !== null) {
       setTimeout(() => {
         Router.push("/me");
         setCookie('splashscreen', true, { maxAge: 3600, path: '/' });

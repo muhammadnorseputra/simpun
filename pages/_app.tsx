@@ -21,15 +21,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       delay: 100,
     });
   });
-
-
   return (
     <RecoilRoot>
       <Head>
         <title>Halo, Welcome</title>
       </Head>
-      <NextNProgress color="#fff" startPosition={0} stopDelayMs={0} height={4} showOnShallow={true} nonce="my-nonce"/>
-      <ThemeProvider enableSystem={true} defaultTheme="system" attribute="class">
+      <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class">
+        <NextNProgress color="#fff" startPosition={0} stopDelayMs={0} height={4} showOnShallow={true} nonce="my-nonce" options={{ showSpinner: false, easing: 'ease' }}/>
         <Component {...pageProps} />
       </ThemeProvider>
     </RecoilRoot>
