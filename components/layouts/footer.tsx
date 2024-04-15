@@ -8,19 +8,6 @@ export default function Footer() {
             <p className="text-gray-500 dark:text-white font-medium">
               Made with <HeartIcon className="w-4 h-4 fill-red-500 stroke-red-600 animate-pulse inline"/> @mnorsaputra
             </p>
-            <button
-              role="button"
-              type="button"
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
-              className="p-2 bg-white dark:bg-slate-800 rounded-full group transition-all duration-700 shadow"
-            >
-              <ArrowSmUpIcon className="w-6 h-6 text-gray-600 dark:text-slate-100 transition-all ease-out group-hover:text-slate-400 group-hover:fill-slate-600 origin-bottom group-hover:scale-110" />
-            </button>
           </div>
         </footer>
     )

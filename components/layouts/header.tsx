@@ -42,14 +42,14 @@ export default function Header() {
   const [isOpen, setIsOpen] = useRecoilState(openStateModal)
   return (
     <>
-    <header className="sticky top-0 z-10">
-      <div className="flex items-center justify-between p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70">
+    <header className="sticky top-0 z-50">
+      <div className="flex items-center justify-between px-4 py-2 sm:p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70">
         {/* Logo */}
         <Link href="/me">
-        <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-white sm:text-gray-800 dark:text-white text-2xl font-bold hover:cursor-pointer">
+        <div className="flex justify-between items-center gap-x-5 divide-x divide-gray-200 text-white sm:text-gray-800 dark:text-white text-md sm:text-2xl font-bold hover:cursor-pointer">
           <div>
             #mnorsaputra
-            <div className="text-xs m-0  p-0">Fullstack Web Developer</div>
+            <div className="text-[9px] sm:text-xs m-0 p-0">Fullstack Web Developer</div>
           </div>
         </div>
         </Link>
