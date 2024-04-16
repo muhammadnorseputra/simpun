@@ -5,7 +5,7 @@ import { Skill } from "../icons/brand";
 
 export function SkillItem({icon, title}: any) {
   return (
-    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center snap-start relative overflow-hidden">
+    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] shadow-lg shadow-gray-300 dark:shadow-none rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center snap-start relative overflow-hidden">
       {icon}
       <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">{title}</div>
     </div>
