@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
 import Router from "next/router";
-import { setCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 
 const SplashScreen: NextPage = () => {
   useEffect(() => {
     const { pathname } = Router;
-    if (pathname == "/") {
+    if (pathname == "/" && getCookie('splashscreen') !== null) {
       setTimeout(() => {
         Router.push("/me");
         setCookie('splashscreen', true, { maxAge: 3600, path: '/' });
-      }, 3000);
+      }, 100);
     }
   });
   return (
@@ -30,7 +30,7 @@ const SplashScreen: NextPage = () => {
     </svg>
     <span className="cloud cloud--medium" />
     <span className="cloud cloud--large" />
-    <h3 className="text-black dark:text-white"><strong> @putra</strong> sedang dalam perjalanan ...</h3>
+    <h3 className="text-black"><strong>👋🏻</strong> mohon tunggu loading ...</h3>
   </div>
   );
 };

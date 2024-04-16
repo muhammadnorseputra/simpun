@@ -9,7 +9,7 @@ import { useRef } from "react";
 function Hobby({hobbys}: any) {
   const slider = useRef<any>(null);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     autoplay: true,
@@ -41,8 +41,8 @@ function Hobby({hobbys}: any) {
           </div>
           ))}
         </Slider>
-        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
-        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-blue-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-white hover:text-green-700 transition-all group text-black rounded-full absolute right-8 top-8 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-white hover:text-green-700 transition-all group text-black rounded-full absolute right-20 top-8 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:scale-75"/> </button>
 
       </div>
     </section>

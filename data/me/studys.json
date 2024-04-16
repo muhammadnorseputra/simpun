@@ -1,0 +1,42 @@
+[
+    {
+		"id": 1,
+		"tingkat": "S1",
+		"jurusan": "Teknologi Informasi",
+		"location": "ITS Mandiri",
+		"year_start": "2023",
+		"year_end": "Sekarang"
+	},
+	{
+		"id": 2,
+		"tingkat": "S1",
+		"jurusan": "Administration Public",
+		"location": "STIA Amuntai",
+		"year_start": "2018",
+		"year_end": "2021"
+	},
+	{
+		"id": 3,
+		"tingkat": "SMK",
+		"jurusan": "MULTIMEDIA",
+		"location": "SMK NEGERI 1 BATUMANDI",
+		"year_start": "2014",
+		"year_end": "2017"
+	},
+	{
+		"id": 4,
+		"tingkat": "SMP",
+		"jurusan": null,
+		"location": "SMP NEGERI 1 BATUMANDI",
+		"year_start": "2011",
+		"year_end": "2014"
+	},
+	{
+		"id": 5,
+		"tingkat": "SD",
+		"jurusan": null,
+		"location": "SD NEGERI BANUA HANYAR",
+		"year_start": "2005",
+		"year_end": "2011"
+	}
+]

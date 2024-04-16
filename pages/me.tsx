@@ -9,32 +9,28 @@ import Hobbys from "@/components/hobbys/hobby";
 import Projects from "@/components/projects/project"
 import Contacts from "@/components/contacts";
 
+import project from '@/data/me/projects.json'
+import study from '@/data/me/studys.json'
+import hobby from '@/data/me/hobbys.json'
+import carrier from '@/data/me/carriers.json'
+import my from '@/data/me/me.json'
 
-const Me: NextPage = ({ resource }: any) => {
-  const { projects, studys, hobbys, carriers, me } = resource;
+const Me: NextPage = () => {
   return (
     <Layouts>
       <Head>
         <title>@mnorsaputra - Me</title>
       </Head>
-      <HeroGlow me={me}/>
-      <Study studys={studys}/>
-      <Cariers carriers={carriers}/>
+      <HeroGlow my={my}/>
+      <Study studys={study}/>
+      <Cariers carriers={carrier}/>
       <Skills />
-      <Projects projects={projects}/>
-      <Hobbys hobbys={hobbys}/>
+      <Projects projects={project}/>
+      <Hobbys hobbys={hobby}/>
       <Contacts/>
     </Layouts>    
   );
 };
 
-// This gets called on every request
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/db.json`)
-  const resource = await response.json()
-  // Pass resource to the page via props
-  return { props: { resource } }
-}
 
 export default Me;

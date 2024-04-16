@@ -56,8 +56,8 @@ export default function Project({ projects }: any) {
           </div>
           ))}
         </Slider>
-        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white hover:bg-amber-400 hover:text-white transition-all group text-black rounded-full absolute right-8 top-8 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
-        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white hover:bg-amber-400 hover:text-white transition-all group text-black rounded-full absolute right-20 top-8 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:-scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickNext()} data-aos="fade-down" data-aos-delay="250" className="bg-white bg-green-400 text-white transition-all group text-black rounded-full absolute right-8 top-10 p-2" type="button" role="button"> <ArrowCircleRightIcon className="w-6 h-6 transition-all group-active:scale-75"/> </button>
+        <button onClick={() => slider?.current?.slickPrev()} data-aos="fade-down" data-aos-delay="150" className="bg-white bg-green-400 text-white transition-all group text-black rounded-full absolute right-20 top-10 p-2" type="button" role="button"> <ArrowCircleLeftIcon className="w-6 h-6 transition-all group-active:scale-75"/> </button>
       </div>
     </section>
   );
