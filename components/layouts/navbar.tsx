@@ -5,11 +5,17 @@ import {
   ArrowSmUpIcon,
     DotsCircleHorizontalIcon, HomeIcon,
   } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
   
 export default function Navbar() {
+
   const [showButton, setShowButton] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true); // State baru untuk visibilitas navbar
+  
+  const router = useRouter()
+
+  const isHome = router.pathname === '/me' ? false : true;
 
   const controlButtonVisibility = () => {
     if (typeof window !== "undefined") {
@@ -42,15 +48,17 @@ export default function Navbar() {
     }
   }, [lastScrollY]);
     return (
-        <nav className={`border-b-4 py-2 dark:border-amber-500 sm:border-gray-200 dark:sm:border-gray-800 sticky bottom-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg z-20 duration-500 ${navbarVisible ? 'translate-y-0' : 'translate-y-full'}`}>
+        <nav className={`border-b-4 py-2 dark:border-gray-800 sm:border-gray-200 dark:sm:border-gray-800 sticky bottom-0 bg-white/80 dark:bg-slate-900/70 backdrop-blur-lg z-20 duration-500 ${navbarVisible ? 'translate-y-0' : 'translate-y-full'}`}>
           <ul className="flex justify-center items-center align-middle ml-3">
-            <li className="text-center">
+            {isHome && (<li className="text-center">
               <Link href="/me" passHref>
                 <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
                   <HomeIcon className="w-6 h-6 text-gray-600 dark:text-amber-500"/>
                 </a>
               </Link>
             </li>
+            )
+            }
             <li className="w-full text-center">
               <Link href="/me/#cariers" passHref scroll={false}>
                 <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">

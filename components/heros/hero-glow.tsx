@@ -6,7 +6,7 @@ function HeroGlow( { my }: any ) {
   const { intro, tagline, description } = my
 	return (
 		<section>
-        <div className="px-4 py-12 relative bg-white/60 dark:bg-black/70 animate-reduce overflow-hidden z-0">
+        <div className="px-8 sm:px-4 py-12 relative bg-white/60 dark:bg-black/70 animate-reduce overflow-hidden z-0">
           <div className="w-72 h-72 animate-debouce animate-reduce rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-amber-200 top-12 left-1/2 mix-blend-multiply"></div>
           <div className="w-72 h-72 animate-debouce animate-reduce animate-delay-2000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-pink-200 bottom-12 left-1/4 mix-blend-multiply"></div>
           <div className="w-72 h-72 animate-debouce animate-reduce animate-delay-4000 rounded-full absolute filter blur-2xl opacity-60 dark:opacity-80 bg-violet-200 top-4 right-1/2 mix-blend-multiply"></div>
