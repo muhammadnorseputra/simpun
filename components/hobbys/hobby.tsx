@@ -24,7 +24,7 @@ function Hobby({hobbys}: any) {
     <section className="overflow-hidden dark:border-b-8 dark:border-gray-900">
       <div className="relative px-6 py-8 bg-white dark:bg-slate-800">
         <h2 className="inline text-2xl font-bold text-black dark:text-slate-400 relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">
-          Hobby
+          #Hobby
         </h2>
         <Slider ref={slider} {...settings} className="pt-5">
           {

@@ -6,7 +6,7 @@ function Study({ studys }: any) {
 	<section id="studys" className='overflow-x-hidden border-b-8 dark:border-b-0 border-gray-100'>
         <div className="relative px-6 py-8 dark:bg-black overflow-hidden">
           <AcademicCapIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-10 -rotate-45 absolute -right-20 -bottom-10"/>
-          <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">Study</h2>
+          <h2 className="inline text-2xl font-bold text-slate-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-800 before:animate-pulse">#Study</h2>
           <div className="flex flex-nowrap space-x-6 mt-4 overflow-y-hidden overflow-x-auto scrolling-touch pb-4">
             {studys.map((study:any) => (
             <div key={study.id} className="min-w-[300px] bg-green-50 rounded-2xl relative group border">

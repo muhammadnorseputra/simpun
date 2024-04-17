@@ -52,7 +52,7 @@ export default function Navbar() {
           <ul className="flex justify-center items-center align-middle ml-3">
             {isHome && (<li className="text-center">
               <Link href="/me" passHref>
-                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-2 sm:px-4 py-2 sm:py-3 relative navigation-effect">
                   <HomeIcon className="w-6 h-6 text-gray-600 dark:text-amber-500"/>
                 </a>
               </Link>
@@ -61,21 +61,21 @@ export default function Navbar() {
             }
             <li className="w-full text-center">
               <Link href="/me/#cariers" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-2 sm:px-4 py-2 sm:py-3 relative navigation-effect">
                   Cariers
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#skills" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-2 sm:px-4 py-2 sm:py-3 relative navigation-effect">
                   Skills
                 </a>
               </Link>
             </li>
             <li className="w-full text-center">
               <Link href="/me/#projects" passHref scroll={false}>
-                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                <a className="block hover:bg-gray-100 self-center dark:hover:bg-black/40 rounded-xl px-2 sm:px-4 py-2 sm:py-3 relative navigation-effect">
                   Projects
                 </a>
               </Link>
@@ -124,7 +124,7 @@ export default function Navbar() {
                     </Menu.Item>
                   </Menu.Items>
                 </Transition>
-                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-xl px-4 py-3 relative navigation-effect">
+                <Menu.Button className="flex items-center justify-center gap-x-1 md:gap-x-2 hover:bg-gray-100 dark:hover:bg-black/40 rounded-xl px-2 sm:px-4 py-2 sm:py-3 relative navigation-effect">
                   <DotsCircleHorizontalIcon className="w-6 h-6 text-gray-400" />{" "}
                   More{" "}
                 </Menu.Button>

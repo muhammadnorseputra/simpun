@@ -5,7 +5,7 @@ import { Skill } from "../icons/brand";
 
 export function SkillItem({icon, title}: any) {
   return (
-    <div className="min-w-[220px] h-[220px] sm:min-w-[120px] sm:h-[120px] shadow-lg shadow-gray-300 dark:shadow-none rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center snap-start relative overflow-hidden">
+    <div className="min-w-[120px] h-[120px] shadow-lg shadow-gray-300 dark:shadow-none rounded-2xl bg-white dark:bg-slate-900 dark:border-slate-800 dark:border flex items-center justify-center snap-start relative overflow-hidden">
       {icon}
       <div className="absolute bottom-0 left-0 bg-black/50 text-white text-center w-full">{title}</div>
     </div>
@@ -18,7 +18,7 @@ export default function Skills() {
           <div className="relative px-6 py-12 bg-gray-100 dark:bg-slate-700 overflow-hidden -mt-5" data-aos="fade-in" data-aos-delay="150" data-aos-anchor-placement="top">
             <ColorSwatchIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -left-10 -bottom-10" />
             <h2 className="inline text-2xl font-bold text-gray-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-gray-800 before:animate-pulse">
-              Skill
+              #Skill
             </h2>
             <div className="flex flex-nowrap sm:flex-wrap sm:justify-between sm:items-center  justify-evenly overflow-y-hidden overflow-x-auto scrolling-touch snap-start scroll-smooth gap-y-3 gap-x-3 mt-8">
               <SkillItem icon={<Skill type="boostrap" />} title="bootsrap"/>

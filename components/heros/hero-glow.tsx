@@ -18,7 +18,7 @@ function HeroGlow( { my }: any ) {
             </div>
             <div className="px-5 sm:px-5 md:px-10">
               <h1 className="text-sm sm:text-xl font-bold text-black dark:text-white"  data-aos="fade-up">{intro}</h1>
-              <p className="text-lg sm:text-3xl font-bold py-2 text-green-700 dark:text-green-400"  data-aos="fade-up" data-aos-delay="300">{tagline}</p>
+              <p className="text-2xl sm:text-3xl font-bold py-2 text-green-600 dark:text-green-400"  data-aos="fade-up" data-aos-delay="300">{tagline}</p>
               <p className="text-sm sm:text-md leading-6 text-black/90 dark:text-gray-100" data-aos="fade-in" data-aos-delay="400"> {description} </p>
               <div className="flex items-end justify-start">
               <div data-aos="fade-right">

@@ -50,7 +50,7 @@ function Contacts() {
     <section className="overflow-hidden">
     <div className="relative px-6 py-8 overflow-hidden bg-slate-800 z-10" data-aos="fade-down">
       <h2 className="inline text-2xl font-bold text-slate-400 relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-slate-400 before:animate-pulse">
-        Contact Me
+        #Contact Me
       </h2>
       <div className="text-sm text-gray-400 mt-4 border-b border-slate-600 pb-4">
           <div className="flex items-center justify-start gap-5">

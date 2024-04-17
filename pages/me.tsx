@@ -14,7 +14,6 @@ import study from '@/data/me/studys.json'
 import hobby from '@/data/me/hobbys.json'
 import carrier from '@/data/me/carriers.json'
 import my from '@/data/me/me.json'
-import HeroGradient from "@/components/heros/hero-gradient";
 
 const Me: NextPage = () => {
   return (
