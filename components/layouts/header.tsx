@@ -1,4 +1,4 @@
-import { LightBulbIcon, CogIcon, MoonIcon, MusicNoteIcon, VolumeOffIcon, ArrowLeftIcon } from "@heroicons/react/outline";
+import { LightBulbIcon, CogIcon, MoonIcon, MusicNoteIcon, VolumeOffIcon, ArrowLeftIcon, BookmarkAltIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
 import { useRecoilState } from 'recoil'
 import { openStateModal } from 'atoms';
@@ -46,7 +46,7 @@ export default function Header() {
   const isBack = router.pathname === '/[id]/[slug]'
   return (
     <>
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-30">
       <div className="flex items-center justify-between px-4 py-2 sm:p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70">
         {/* Logo */}
         <Link href="/me">
@@ -58,7 +58,7 @@ export default function Header() {
             role="button"
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600 group"
           >
-            <ArrowLeftIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 dark:text-white group-hover:text-green-500 focus:text-blue-200"></ArrowLeftIcon>
+            <ArrowLeftIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 dark:text-white group-hover:text-green-500 focus:text-blue-200"/>
           </button>
           </div>)
           }
@@ -89,7 +89,7 @@ export default function Header() {
             role="button"
             className="p-2 mx-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600 group"
           >
-            {theme === 'light' ? <MoonIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-white sm:text-gray-500 fill-gray-100 sm:fill-slate-400"/> : <LightBulbIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />}
+            {theme === 'light' ? <MoonIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 group-hover:text-green-500"/> : <LightBulbIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />}
           </button>
           <button
             onClick={() => setIsOpen(true)}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "@sindresorhus/slugify";
 import {UserCircleIcon, LinkIcon, ChatAlt2Icon} from "@heroicons/react/outline";
+import { useEffect } from "react";
 
 export default function PostList({posts}: any) {
     return (
@@ -38,9 +39,16 @@ export default function PostList({posts}: any) {
     )
 }
 
+
 export const PostListLabel = ({posts}: any) => {
+  
+    async function getImg(postId: any) {
+      const img = await fetchImageId(postId)
+      return img
+    }
   return (
       posts.map((post:any) => (
+        
           <article key={post.id} className="mx-4 md:mx-6 my-6 relative overflow-hidden group">
             <div className="flex justify-between items-center">
               <div className="flex flex-col justify-start items-start space-y-2 w-9/12 pr-5">
@@ -59,7 +67,7 @@ export const PostListLabel = ({posts}: any) => {
               </div>
               <div className="relative">
               {/* <Image layout="intrinsic" width="110" height="110"
-                  objectFit="cover" src={`${await fetchImageId(post.id)}`} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(Shimmer(110, 110))}`}  className="transition-all group-hover:opacity-50 group-hover:blur-sm" /> */}
+                  objectFit="cover" src={getImg(post.id).then((val) => `${val}`)} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(Shimmer(110, 110))}`}  className="transition-all group-hover:opacity-50 group-hover:blur-sm" /> */}
                 <Link href={`/${post.id}/${slugify(post.title)}`}><div className="transition-all absolute top-[calc(35%)] left-[40%] hidden hover:scale-110 group-hover:block  p-2 rounded-full bg-white cursor-pointer">
                   <LinkIcon className="w-4 h-4 text-green-600 dark:text-green-500"/>
                 </div></Link>
@@ -67,5 +75,5 @@ export const PostListLabel = ({posts}: any) => {
             </div>
           </article>
       ))
-  )
+    )
 }

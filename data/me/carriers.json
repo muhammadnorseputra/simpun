@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": 3,
 		"title": "Fullstack Web Developer",
 		"location": "BKPSDM Kab. Balangan",
 		"carrier_start": 2017,
@@ -8,6 +8,13 @@
 	},
 	{
 		"id": 2,
+		"title": "Freelance",
+		"location": "Global",
+		"carrier_start": 2021,
+		"carrier_end": "Sekarang"
+	},
+	{
+		"id": 1,
 		"title": "Blogger",
 		"location": "Google, Inc",
 		"carrier_start": 2021,

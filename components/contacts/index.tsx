@@ -130,7 +130,7 @@ function Contacts() {
             className={`resize-none block p-2.5 w-full text-md text-white bg-gray-700 border ${!formik.errors.message && formik.touched.message ? `border-green-700 dark:border-green-300` : 'border-gray-600'} focus:ring-green-500 focus:border-green-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500`} placeholder="Type Your message here..." value={formik.values.message} />
             {formik.errors.message && formik.touched.message ? (<span className='text-red-400 text-sm'>{formik.errors.message}</span>) : null}
         </div>
-        <button type="submit" disabled={!formik.isValid || !formik.dirty || formik.isSubmitting} data-aos="fade-up" data-aos-delay="250" role="submit" className="inline-flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded disabled:bg-green-300 disabled:border-green-300 disabled:text-green/50 disabled:cursor-not-allowed">
+        <button type="submit" disabled={!formik.isValid || !formik.dirty || formik.isSubmitting} data-aos="fade-up" data-aos-delay="250" role="submit" className="inline-flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-400 text-green-800 font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded disabled:bg-green-300 disabled:border-green-300 disabled:text-green/50 disabled:cursor-not-allowed">
             { formik.isSubmitting ? <LoadingSpinner/> : 'Send' } 
         </button>
       </form>
