@@ -1,10 +1,9 @@
-import Header from '@/components/layouts/header'
-import Navbar from '@/components/layouts/navbar'
-import Footer from '@/components/layouts/footer'
 
-// const Header = dynamic(() => import(''))
-// const Navbar = dynamic(() => import(''))
-// const Footer = dynamic(() => import(''))
+import dynamic from 'next/dynamic'
+
+const Header = dynamic(() => import('@/components/layouts/header'), {ssr: false})
+const Navbar = dynamic(() => import('@/components/layouts/navbar'), {ssr: false})
+const Footer = dynamic(() => import('@/components/layouts/footer'), {ssr: false})
 
 export default function Layouts({ children }: any) {
     return (

@@ -1,3 +1,5 @@
+'use client'
+
 import { LightBulbIcon, CogIcon, MoonIcon, MusicNoteIcon, VolumeOffIcon, ArrowLeftIcon, BookmarkAltIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
 import { useRecoilState } from 'recoil'
@@ -40,11 +42,14 @@ export default function Header() {
   }, [isPlay]);
   
   const { theme, setTheme } = useTheme();
+  let isTheme = theme === 'light' ? <MoonIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 group-hover:text-green-500"/> : <LightBulbIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />
+
   const [isOpen, setIsOpen] = useRecoilState(openStateModal)
   const router = useRouter()
 
   const isBack = router.pathname === '/[id]/[slug]'
   return (
+    
     <>
     <header className="sticky top-0 z-30">
       <div className="flex items-center justify-between px-4 py-2 sm:p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70">
@@ -89,7 +94,7 @@ export default function Header() {
             role="button"
             className="p-2 mx-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-600 group"
           >
-            {theme === 'light' ? <MoonIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white sm:text-gray-500 group-hover:text-green-500"/> : <LightBulbIcon className="w-4 h-4 sm:w-6 sm:h-6  group-hover:text-green-500 text-gray-500 stroke-amber-400 fill-amber-500" />}
+            {isTheme}
           </button>
           <button
             onClick={() => setIsOpen(true)}

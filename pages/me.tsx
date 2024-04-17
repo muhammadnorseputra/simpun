@@ -14,6 +14,7 @@ import study from '@/data/me/studys.json'
 import hobby from '@/data/me/hobbys.json'
 import carrier from '@/data/me/carriers.json'
 import my from '@/data/me/me.json'
+import HeroGrid from "@/components/heros/hero-grid";
 
 const Me: NextPage = () => {
   return (
@@ -21,7 +22,7 @@ const Me: NextPage = () => {
       <Head>
         <title>@mnorsaputra - Me</title>
       </Head>
-      <HeroGlow my={my}/>
+      <HeroGrid my={my}/>
       <Study studys={study}/>
       <Cariers carriers={carrier}/>
       <Skills />
