@@ -12,5 +12,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/me/:path*', '/certificates', '/blogs'],
+  matcher: ['/me', '/certificates', '/blogs'],
 }

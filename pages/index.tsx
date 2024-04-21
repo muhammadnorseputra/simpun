@@ -5,11 +5,12 @@ import { getCookie, setCookie } from 'cookies-next';
 
 const SplashScreen: NextPage = () => {
   useEffect(() => {
-    if (getCookie('splashscreen') === null || getCookie('splashscreen') === true || typeof getCookie('splashscreen') === 'undefined') {
+    if (getCookie('splashscreen') !== null || typeof getCookie('splashscreen') !== 'undefined') {
       setTimeout(() => {
         Router.push("/me");
         setCookie('splashscreen', true, { maxAge: 3600, path: '/' });
-      }, 100);
+        console.log(getCookie('splashscreen'))
+      }, 1000);
     }
   });
   return (

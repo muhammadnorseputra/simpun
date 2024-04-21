@@ -47,7 +47,7 @@ export default function Project({ projects }: any) {
             />
             </div>
             <div className="flex justify-between items-center md:px-5">
-              <div className="px-2 md:px-4 py-1 rounded-full bg-green-300 text-black text-xs my-2 inline-block">{project.technology}</div>
+              <div className="px-2 md:px-4 py-1 rounded-full bg-green-100 text-black text-xs my-2 inline-block">{project.technology}</div>
               <Link href={project.url} legacyBehavior>
                 <a target="_blank" className="hover:text-blue-500 p-2 text-white bg-black/40 rounded-full right-1 relative" data-aos="fade-up" data-aos-delay="150"><ExternalLinkIcon className="w-5 h-5"/></a>
               </Link>

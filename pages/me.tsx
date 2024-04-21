@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Layouts from "@/components/layouts";
-import HeroGlow from "@/components/heros/hero-glow";
 import Skills from "@/components/skills/skills";
 import Study from "@/components/studys/study";
 import Cariers from "@/components/cariers/carier";
@@ -32,6 +31,5 @@ const Me: NextPage = () => {
     </Layouts>    
   );
 };
-
 
 export default Me;

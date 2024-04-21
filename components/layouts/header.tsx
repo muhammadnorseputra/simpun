@@ -9,9 +9,38 @@ import Link from "next/link";
 import useSound from "use-sound";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { cn } from "@/utils/cn";
 
 
 export default function Header() {
+  // auto hide header
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true); // State baru untuk visibilitas navbar
+
+  const controlButtonVisibility = () => {
+    if (typeof window !== "undefined") {
+
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setHeaderVisible(false);
+      } else {
+        setHeaderVisible(true);
+      }
+      // Memperbarui posisi scroll terakhir
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlButtonVisibility);
+
+      return () => {
+        window.removeEventListener("scroll", controlButtonVisibility);
+      };
+    }
+  }, [lastScrollY]);
+
+
   // MUSIK
   const [play, { stop }] = useSound('./musik/One-Direction-Right-Now-Audio.mp3', {
     autoplay: false,
@@ -52,7 +81,7 @@ export default function Header() {
     
     <>
     <header className="sticky top-0 z-30">
-      <div className="flex items-center justify-between px-4 py-2 sm:p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70">
+      <div className={cn(`flex items-center justify-between px-4 py-2 sm:p-4 bg-[#16a34a] sm:bg-white dark:sm:bg-slate-900 dark:sm:bg-gradient-to-b dark:sm:from-slate-900 dark:sm:to-slate-900/70 duration-500`, headerVisible ? 'translate-y-0' : '-translate-y-full')}>
         {/* Logo */}
         <Link href="/me">
         <div className="flex justify-between items-center text-white sm:text-gray-800 dark:text-white text-md sm:text-2xl font-bold hover:cursor-pointer">

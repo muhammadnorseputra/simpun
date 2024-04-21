@@ -11,8 +11,8 @@ import { useRouter } from "next/router";
   
 export default function Navbar() {
 
-  const [showButton, setShowButton] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [showButton, setShowButton] = useState(false);
   const [navbarVisible, setNavbarVisible] = useState(true); // State baru untuk visibilitas navbar
   
   const router = useRouter()

@@ -15,7 +15,7 @@ export function SkillItem({icon, title}: any) {
 export default function Skills() {
     return (
         <section id="skills"  className='overflow-x-hidden'>
-          <div className="relative px-6 py-12 bg-gray-100 dark:bg-slate-700 overflow-hidden -mt-5" data-aos="fade-in" data-aos-delay="150" data-aos-anchor-placement="top">
+          <div className="relative px-6 py-12 bg-green-50 dark:bg-slate-700 overflow-hidden -mt-5" data-aos="fade-in" data-aos-delay="150" data-aos-anchor-placement="top">
             <ColorSwatchIcon className="w-64 h-64 stroke-1 stroke-slate-600 fill-slate-300 opacity-5 absolute -left-10 -bottom-10" />
             <h2 className="inline text-2xl font-bold text-gray-800 dark:text-white relative before:absolute before:w-1 before:h-full before:top-0 before:-left-6 before:rounded-r-3xl before:bg-gray-800 before:animate-pulse">
               #Skill
